@@ -1,0 +1,32 @@
+<div class="registro">
+  <div class="titulo font2">
+    <img src="assets/KATEWHITE.png" height="100">
+  </div>
+
+  <form>
+    <div class="control-group">
+      <mat-form-field appearance="outline" style="font-family: Josefin Sans;">
+        <mat-label>Correo electrónico</mat-label>
+        <input matInput placeholder="example@example.com" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="control-group">
+      <mat-form-field appearance="outline" style="font-family: Josefin Sans;">
+        <mat-label>Contraseña</mat-label>
+        <input matInput type="password"  name="clave1">
+      </mat-form-field>
+    </div>
+
+    <div class="control-group">
+      <mat-form-field appearance="outline" style="font-family: Josefin Sans;">
+        <mat-label>Confirme contraseña</mat-label>
+        <input matInput type="password"  name="clave2">
+      </mat-form-field>
+    </div>
+  </form>
+
+  <button mat-raised-button class="btn-inicio-sesion font2" mat-dialog-close routerLink="/calidad-aire">Registrarse</button>
+
+</div>

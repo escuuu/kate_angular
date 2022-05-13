@@ -1,0 +1,57 @@
+.login {
+  margin: 20px auto;
+  width: 300px;
+  }
+
+mat-form-field {
+    width: 300px;
+}
+
+.titulo {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+.control-group {
+    margin-bottom: 10px;
+    }
+
+.btn-inicio-sesion {
+  background-color: #51a8b1;
+  color: white;
+  width: 300px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  font-size: 23px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.registro-login {
+  text-align: center;
+  color: white;
+}
+
+.registro-login .button {
+  background-color: transparent;
+}
+
+::placeholder {
+  color: white;
+  opacity: 0.6;
+}
+
+input {
+  color: white;
+}
+
+.ver-contra {
+  color: #51a8b1;
+}
+
+
+

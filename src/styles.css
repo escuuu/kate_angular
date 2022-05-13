@@ -1,0 +1,29 @@
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+
+.font1{
+  font-family: 'Koulen', cursive;
+}
+
+.font2 {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.font3 {
+  font-family: 'Staatliches', cursive;
+}
+
+mat-dialog-container {
+  background-color: #2b2e4d!important;
+  overflow: hidden !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #51a8b1 !important;
+}
+
+.mat-form-field-label{
+  color: rgb(255, 255, 255) !important;
+}
+
+

@@ -1,0 +1,192 @@
+html,body{
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#contenido {
+  width: 1000px auto;
+  margin: 0 auto;
+}
+
+.contenido-centrado {
+  text-align: center;
+}
+
+.titulo_producto {
+  letter-spacing: 3px;
+  font-size: 50px;
+  font-weight: 900;
+  color: #2b2e4d;
+}
+
+.explicacion_producto {
+  margin-top: 30px;
+  font-size: 33px;
+  font-weight: 300;
+}
+
+.ventajas-producto {
+  margin-top: 2%;
+  font-size: 22px;
+  font-weight: 300;
+  color: #575757;
+}
+
+.imagenes-kate {
+  margin: 5% 20% 0 20%;
+  display: flex;
+}
+
+.imagen {
+  height: 200px;
+}
+
+.kate-monitor {
+  position: static;
+  display: inline-block;
+}
+
+.example-spacer {
+  margin: 0 150px 0 150px;
+}
+
+.sensor-explicacion {
+  margin-top: 10%;
+  font-size: 30px;
+  color: #2b2e4d;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.kate-monitor .explicacion {
+  margin-top: 10%;
+  text-align: justify;
+  font-size: 27px;
+  line-height: 40px;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 1400px) {
+  #contenido {
+    margin: 0px 20px 0 20px;
+  }
+
+  .titulo_producto {
+    font-size: 40px;
+  }
+
+  .explicacion_producto {
+    font-size: 27px;
+  }
+
+  .ventajas-producto {
+    font-size: 20px;
+  }
+
+  .imagenes-kate {
+    margin: 3% 15% 0 15%;
+  }
+
+  .imagen {
+    height: 150px;
+  }
+
+  .sensor-explicacion {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .kate-monitor .explicacion {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #575757;
+  }
+
+}
+
+@media screen and (max-width: 1050px) {
+  #contenido {
+    margin: 0px 20px 0 20px;
+  }
+
+  .titulo_producto {
+    font-size: 40px;
+  }
+
+  .explicacion_producto {
+    margin-top: 30px;
+    font-size: 23px;
+  }
+
+  .ventajas-producto {
+    font-size: 18px;
+  }
+
+  .imagenes-kate {
+    margin: 5% 15% 0 15%;
+  }
+
+  .example-spacer {
+    margin: 0 100px 0 100px;
+  }
+
+  .imagen {
+    height: 150px;
+  }
+
+  .sensor-explicacion {
+    font-size: 21px;
+    line-height: 30px;
+  }
+
+  .kate-monitor .explicacion {
+    font-size: 15px;;
+    line-height: 30px;
+  }
+
+}
+
+@media screen and (max-width: 850px) {
+  #contenido {
+    margin: 0px 10px 0 10px;
+  }
+
+  .titulo_producto {
+    font-size: 30px;
+  }
+
+  .explicacion_producto {
+    margin-top: 25px;
+    font-size: 23px;
+  }
+
+  .ventajas-producto {
+    font-size: 15px;
+  }
+
+  .sensor-explicacion {
+    font-size: 18px;
+    line-height: 2px;
+    margin-top: 10%;
+  }
+
+  .kate-monitor .explicacion {
+    font-size: 17px;
+    line-height: 25px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+
+  .imagenes-kate {
+    display: block;
+    margin: 7% 15% 0 15%;
+  }
+
+  .example-spacer {
+    margin: 0 0 0 0;
+  }
+
+}

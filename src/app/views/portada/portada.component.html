@@ -1,0 +1,52 @@
+
+  <div class="segunda-toolbar">
+    <button mat-flat-button class="btn_tool" id="inicio-button" aria-label="Example icon-button with heart icon">
+      <span class="inicio_class font2" routerLink="/inicio">Inicio</span>
+    </button>
+    <span class="example-spacer"></span>
+
+    <button mat-flat-button class="btn_tool" aria-label="Example icon-button with heart icon">
+      <span class="inicio_class font2" routerLink="/calidad-aire">Calidad del aire</span>
+    </button>
+    <span class="example-spacer"></span>
+
+    <button mat-flat-button class="btn_tool" >
+      <span class="inicio_class font2" routerLink="/ubicanos">Contáctanos</span>
+    </button>
+    <span class="example-spacer"></span>
+
+    <button mat-flat-button class="btn_tool" id="login-button" (click)="openLoginDialog()">
+      <span class="inicio_class font2">
+        Inicio sesión<mat-icon>person</mat-icon>
+      </span>
+    </button>
+  </div>
+
+  <div id="contenido">
+    <div class="contenido-centrado">
+      <!-- <img src="assets/Portada_APP.jpg" height="800" width="1900" class="img_logo"/> -->
+      <img src="assets/logo_kate.png" height="250" class="img_logo"/>
+    </div>
+
+    <div class="kate-explicacion font2" style="font-weight: 300;">
+      <span>¿Sabías que pasamos el 90% de nuestras vidas en interiores?</span>
+      <span>
+        <div class="kate_monitorea">
+          <span  class="kate_platform font3">KATE</span>
+          Platform te permite monitorizar en
+          <span class="kate_platform font3">TIEMPO REAL</span>
+          <img src='assets/maps_icon.png' class="img_maps">
+          <br>la calidad del aire que respiras dentro de ellos.
+        </div>
+      </span>
+    </div>
+  </div>
+  <div class="app_producto">
+    <app-producto></app-producto>
+  </div>
+
+  <div class="app_funciona">
+    <app-funcionalidad></app-funcionalidad>
+  </div>
+
+

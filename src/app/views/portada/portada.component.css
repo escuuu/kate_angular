@@ -1,0 +1,187 @@
+html,body{
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.segunda-toolbar {
+  height: 40px;
+  margin-Top: 70px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 5px rgb(182, 182, 182);
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.btn_tool {
+  height: 30px;
+  background-color: transparent;
+}
+
+#inicio-button {
+  margin-left: 50px;
+}
+
+#login-button {
+  margin-right: 50px;
+}
+
+.btn_tool:active {
+  background-color: transparent;
+  transform: translateY(-2px);
+  transition: 0.1s;
+}
+
+.inicio_class:hover {
+  border-bottom: 3px solid rgb(5, 243, 37);
+  color: rgb(9, 145, 54);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.inicio_class {
+  font-size: 14px;
+  color: #2b2e4d;
+  font-weight: 400;
+}
+
+.app_producto {
+  margin-top: 150px;
+}
+
+#contenido {
+  width: 1000px auto;
+  margin:  7% 3% 15% 3%;
+}
+
+.contenido-centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.kate-explicacion {
+  margin-top: 6%;
+  text-align: center;
+  font-size: 35px;
+  letter-spacing: 0.74px;
+  color: #2b2e4d;
+}
+
+.kate_platform {
+  letter-spacing: 3px;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.kate_monitorea {
+  margin-top: 65px;
+  line-height: 70px;
+}
+
+@media screen and (max-width: 1400px) {
+
+  #contenido {
+    margin:  5% 3% 15% 3%;
+  }
+
+  .img_logo {
+    height: 190px;
+  }
+
+  .kate-explicacion {
+    margin-top: 5%;
+    font-size: 25px;
+  }
+
+  .kate_platform {
+    font-size: 40px;
+  }
+
+  .kate_monitorea {
+    margin-top: 35px;
+    line-height: 50px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  #contenido {
+    margin:  9% 3% 20% 3%;
+  }
+
+  .img_logo {
+    height: 170px;
+  }
+
+  .img_maps {
+    height: 40px;
+  }
+
+  .kate-explicacion {
+    margin-top: 5%;
+    font-size: 23px;
+    line-height: 40px;
+  }
+
+  .kate_platform {
+    font-size: 35px;
+  }
+
+  .kate_monitorea {
+    margin-top: 25px;
+    line-height: 35px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .segunda-toolbar {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #contenido {
+    margin:  5% 5% 25% 5%;
+  }
+
+  .img_logo {
+    height: 150px;
+  }
+
+  .img_maps {
+    height: 30px;
+  }
+
+  .kate-explicacion {
+    margin-top: 10%;
+    font-size: 20px;
+  }
+
+  .kate_platform {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #contenido {
+    margin: 0px 20px 0 20px;
+  }
+
+  .img_logo {
+    height: 120px;
+    margin-top: 20%;
+  }
+
+
+  .kate-explicacion {
+    margin-top: 15%;
+  }
+}

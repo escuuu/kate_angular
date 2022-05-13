@@ -1,0 +1,202 @@
+html,body{
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#contenido {
+  margin: 5% 7% 0 4%;
+}
+
+.example-spacer {
+  margin: 0 10% 0 10%;
+}
+.explicacion-calidad-aire {
+  position: static;
+  display: flex;
+  margin-bottom: 5%;
+}
+
+.explicacion-calidad-aire .texto {
+  font-size: 25px;
+  line-height: 60px;
+  color: #2b2e4d;
+  text-align: justify;
+}
+
+.imagen {
+  height: 250px;
+}
+
+.beneficios {
+  margin-bottom: 5%;
+}
+
+.beneficios-calidad-aire {
+  display: flex;
+}
+
+.example-spacer2 {
+  margin: 0 15% 0 13%;
+}
+
+.imagen2 {
+  height: 300px;
+}
+
+.lista-beneficios {
+  font-size: 25px;
+  line-height: 50px;
+  color: #2b2e4d;
+  font-weight: 200;
+}
+
+h1 {
+  font-family: 'Josefin Sans';
+  font-size: 30px;
+}
+
+.empeora-calidad {
+  font-size: 25px;
+  line-height: 50px;
+  color: #939393;
+}
+
+.empeora-calidad-aire {
+  display: flex;
+}
+
+.imagen3 {
+  margin-top: 3%;
+  height: 300px;
+}
+
+.example-spacer3 {
+  margin: 0 40% 0 15%;
+}
+
+.empeora {
+  margin-bottom: 4%;
+}
+
+@media screen and (max-width: 1400px){
+
+  .explicacion-calidad-aire .texto {
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  .imagen {
+    height: 200px;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+
+  .lista-beneficios {
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  .imagen2 {
+    height: 250px;
+  }
+
+  .example-spacer2 {
+    margin: 0 8% 0 10%;
+  }
+
+  .empeora-calidad {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .imagen3 {
+    margin-top: 3%;
+    height: 250px;
+  }
+
+  .example-spacer3 {
+    margin: 0 30% 0 18%;
+  }
+}
+
+@media screen and (max-width: 1050px){
+
+  .explicacion-calidad-aire {
+    position: static;
+    display: flex;
+    margin-bottom: 4%;
+  }
+
+  .explicacion-calidad-aire .texto {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .imagen {
+    height: 180px;
+  }
+
+  .lista-beneficios {
+    font-size: 18px;
+    line-height: 35px;
+  }
+
+  .imagen2 {
+    height: 200px;
+  }
+
+  .example-spacer2 {
+    margin: 0 5% 0 5%;
+  }
+
+  .empeora-calidad {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .imagen3 {
+    margin-top: 3%;
+    height: 200px;
+  }
+
+  .example-spacer3 {
+    margin: 0 25% 0 18%;
+  }
+}
+
+@media screen and (max-width: 850px){
+
+  #contenido {
+    margin: 5% 10% 0 10%;
+  }
+
+  .example-spacer {
+    margin: 0 0 0 0;
+  }
+
+  .explicacion-calidad-aire {
+    position: static;
+    display: block;
+    margin-bottom: 5%;
+  }
+
+  .contenido-centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .beneficios-calidad-aire {
+    display: block;
+  }
+
+  .example-spacer3{
+      margin: 0 10% 0 10%;
+  }
+}

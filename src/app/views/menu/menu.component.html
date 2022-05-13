@@ -1,0 +1,26 @@
+  <mat-toolbar>
+    <mat-toolbar-row class="primera_toolbar">
+      <a mat-button routerLink="/inicio">
+        <img src="assets/KATEWHITE.png" height="30">
+      </a>
+      <span class="example-spacer"></span>
+
+    <button mat-icon-button [matMenuTriggerFor]="beforeMenu">
+      <mat-icon class="menu-icon-button">menu</mat-icon>
+    </button>
+
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <button mat-menu-item class="inicio_class icon font2" routerLink="/inicio">Inicio</button>
+      <button mat-menu-item class="inicio_class icon font2" routerLink="/calidad-aire">Calidad del aire</button>
+      <button mat-menu-item class="inicio_class icon font2" routerLink="/ubicanos">Contáctanos</button>
+      <button mat-menu-item class="inicio_class icon font2" routerLink="/iniciar-sesion">Iniciar sesión
+        <mat-icon>person</mat-icon>
+      </button>
+    </mat-menu>
+
+  </mat-toolbar-row>
+  </mat-toolbar>
+
+  
+
+

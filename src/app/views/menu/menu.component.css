@@ -1,0 +1,44 @@
+mat-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5000;
+}
+
+.primera_toolbar {
+  background-color: #2b2e4d;
+  height: 70px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.menu-icon-button {
+  color: white;
+  visibility: collapse;
+}
+
+.inicio_class:hover {
+  border-bottom: 3px solid rgb(5, 243, 37);
+  color: rgb(9, 145, 54);
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.inicio_class {
+  font-size: 13px;
+  color: #2b2e4d;
+  font-weight: 600;
+}
+
+
+@media screen and (max-width: 850px) {
+  .menu-icon-button {
+    visibility: visible;
+  }
+}
+
+
+

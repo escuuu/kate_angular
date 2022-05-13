@@ -1,0 +1,37 @@
+<div id="contenido-centrado">
+  <div class="login">
+    <div class="titulo font2">
+      <img src="assets/KATEWHITE.png" height="100">
+    </div>
+
+    <form>
+      <div class="control-group">
+        <mat-form-field appearance="outline" style="font-family: Josefin Sans;">
+          <mat-label>Correo electrónico</mat-label>
+          <input matInput placeholder="example@example.com" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="control-group">
+        <mat-form-field appearance="outline" style="font-family: Josefin Sans;">
+          <mat-label>Contraseña</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon class="ver-contra">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+    </form>
+
+    <button mat-raised-button class="btn-inicio-sesion font2" mat-dialog-close routerLink="/calidad-aire">Iniciar sesión</button>
+
+    <div class="registro-login font2">
+      <label>
+        ¿Aún no estás dado de alta?
+        <button mat-flat-button mat-dialog-close class="registro-login button font2"> Registrate</button>
+      </label>
+    </div>
+
+  </div>
+</div>
