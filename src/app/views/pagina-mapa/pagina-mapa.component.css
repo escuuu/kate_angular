@@ -7,7 +7,7 @@ html,body{
 
 .segunda-toolbar {
   height: 40px;
-  margin-Top: 70px;
+  margin-top: 70px;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -178,6 +178,10 @@ h1 {
 
   .map-container {
     margin: 45% 0% 0% 0%;
+  }
+
+  .map-frame {
+    width: 80%;
   }
 }
 
