@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { FormControl, Validators, FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-pagina-login',
@@ -10,7 +10,10 @@ export class PaginaLoginComponent implements OnInit {
   hide = true;
   email = new FormControl('', [Validators.required, Validators.email]);
 
-  constructor() { }
+
+  constructor( ) {
+
+  }
 
   ngOnInit(): void {
   }
@@ -18,5 +21,6 @@ export class PaginaLoginComponent implements OnInit {
   getErrorMessage() {
     return this.email.hasError('email') ? 'Email no válido' : '';
   }
+
 
 }

@@ -184,8 +184,13 @@ h1 {
     margin-bottom: 5%;
   }
 
+  .beneficios {
+    margin-bottom: 10%;
+  }
+
   .contenido-centrado {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -196,7 +201,29 @@ h1 {
     display: block;
   }
 
+  .example-spacer2 {
+    margin: 0;
+  }
+
   .example-spacer3{
-      margin: 0 10% 0 10%;
+      margin: 0 0% 0 0%;
+  }
+
+  .empeora-calidad-aire {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width:750px) {
+  .empeora-calidad-aire {
+    flex-direction: column;
+  }
+
+  .imagen3{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 170px;
+    height: 170px;
   }
 }

@@ -15,7 +15,6 @@ html,body{
 }
 
 .titulo_producto {
-  letter-spacing: 3px;
   font-size: 50px;
   font-weight: 900;
   color: #2b2e4d;
@@ -107,8 +106,6 @@ html,body{
 
   .kate-explicacion {
     font-size: 17px;
-    font-weight: 400;
-    color: #575757;
   }
 }
 
@@ -139,7 +136,6 @@ html,body{
 
   .kate-explicacion {
     font-size: 15px;
-    font-weight: 500;
     line-height: 27px;
   }
 }
@@ -159,7 +155,9 @@ html,body{
   }
 
   .ventajas-producto {
-    font-size: 17px;
+    margin-top: 7%;
+    margin-bottom: 10%;
+    font-size: 15px;
   }
 
   .imagen {

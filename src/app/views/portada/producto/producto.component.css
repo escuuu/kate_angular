@@ -15,7 +15,6 @@ html,body{
 }
 
 .titulo_producto {
-  letter-spacing: 3px;
   font-size: 50px;
   font-weight: 900;
   color: #2b2e4d;
@@ -101,8 +100,6 @@ html,body{
   .kate-monitor .explicacion {
     font-size: 18px;
     line-height: 30px;
-    font-weight: 400;
-    color: #575757;
   }
 
 }
@@ -161,9 +158,11 @@ html,body{
   .explicacion_producto {
     margin-top: 25px;
     font-size: 23px;
+    line-height: 30px;
   }
 
   .ventajas-producto {
+    margin-top: 7%;
     font-size: 15px;
   }
 
@@ -171,6 +170,10 @@ html,body{
     font-size: 18px;
     line-height: 2px;
     margin-top: 10%;
+  }
+
+  .kate-monitor {
+    margin-top: 20%;
   }
 
   .kate-monitor .explicacion {
@@ -182,11 +185,12 @@ html,body{
 
   .imagenes-kate {
     display: block;
-    margin: 7% 15% 0 15%;
+    margin: 0% 10% 0 10%;
   }
 
   .example-spacer {
     margin: 0 0 0 0;
+    flex-direction: column;
   }
 
 }

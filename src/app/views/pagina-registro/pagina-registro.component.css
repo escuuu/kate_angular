@@ -1,0 +1,146 @@
+html,body{
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#contenido-centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 96.1%;
+  top: 0;
+}
+
+.login {
+  margin: 20px auto;
+  width: 400px;
+  height: 550px;
+  background-color: #2b2e4d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  border: 3px solid #51a8b1;
+  -webkit-box-shadow: 0px 0px 32px 11px #b0b0b0;
+  box-shadow: 0px 0px 32px 11px #b0b0b0;
+}
+
+mat-form-field {
+    width: 300px;
+}
+
+.titulo {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.control-group {
+  margin-bottom: 10px;
+  }
+
+.btn-inicio-sesion {
+    background-color: #51a8b1;
+    color: white;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    font-size: 23px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.registro-login {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.registro-login .button {
+  background-color: transparent;
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.604);
+  opacity: 0.6;
+}
+
+input {
+  color: rgb(255, 255, 255);
+}
+
+.ver-contra {
+  color: #51a8b1;
+}
+
+@media screen and (max-width: 420px) {
+  #contenido-centrado {
+    width: 100%;
+    height: 95.3%;
+  }
+
+  mat-form-field {
+    width: 250px;
+}
+  img {
+    height: 80px;
+  }
+
+  .login {
+    width: 300px;
+    height: 500px;
+  }
+
+  .btn-inicio-sesion {
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .control-group {
+    margin-bottom: 5px;
+  }
+
+  .registro-login {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  #contenido-centrado {
+    width: 100%;
+    height: 95.4%;
+  }
+
+  mat-form-field {
+    width: 250px;
+}
+  img {
+    height: 70px;
+  }
+
+  .login {
+    width: 300px;
+    height: 480px;
+  }
+
+  .btn-inicio-sesion {
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .control-group {
+    margin-bottom: 0px;
+  }
+
+  .registro-login {
+    font-size: 12px;
+  }
+}
