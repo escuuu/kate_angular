@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators, FormGroup, FormBuilder } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
+import { Usuario } from 'src/app/shared/classes/usuario';
 
 @Component({
   selector: 'app-pagina-login',
@@ -7,15 +8,19 @@ import { FormControl, Validators, FormGroup, FormBuilder } from '@angular/forms'
   styleUrls: ['./pagina-login.component.css']
 })
 export class PaginaLoginComponent implements OnInit {
+  public usuario : Usuario;
   hide = true;
   email = new FormControl('', [Validators.required, Validators.email]);
 
-
   constructor( ) {
-
+    this.usuario = new Usuario();
   }
 
   ngOnInit(): void {
+  }
+
+  login(): void{
+
   }
 
   getErrorMessage() {

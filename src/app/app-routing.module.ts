@@ -1,3 +1,4 @@
+import { PaginaAppComponent } from './views/pagina-app/pagina-app.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'ubicanos', component: PaginaMapaComponent },
   { path: 'iniciar-sesion', component: PaginaLoginComponent },
   { path: 'registro', component: PaginaRegistroComponent },
+  { path: 'sensores-app', component: PaginaAppComponent },
 
   { path: '', redirectTo: '/inicio', pathMatch: 'full' }
 ];

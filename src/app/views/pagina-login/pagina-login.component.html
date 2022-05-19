@@ -4,11 +4,14 @@
       <img src="assets/KATEWHITE.png" height="100">
     </div>
 
-    <form>
+    <form (ngSubmit)="login()" #formLogin="ngForm">
+
       <div class="control-group">
         <mat-form-field appearance="outline" style="font-family: Josefin Sans;">
           <mat-label>Correo electrónico</mat-label>
-          <input matInput placeholder="example@example.com"  [formControl]="email" required>
+          <input matInput placeholder="example@example.com"
+          [(ngModel)]="usuario.correo"
+          name="correo" [formControl]="email" required>
           <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
         </mat-form-field>
       </div>
@@ -16,14 +19,18 @@
       <div class="control-group">
         <mat-form-field appearance="outline" style="font-family: Josefin Sans;">
           <mat-label>Contraseña</mat-label>
-          <input matInput [type]="hide ? 'password' : 'text'">
+          <input matInput [type]="hide ? 'password' : 'text'"
+          [(ngModel)]="usuario.contrasena"
+          name="contrasena"
+          #contrasena="ngModel"
+          required>
           <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
             <mat-icon class="ver-contra">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
           </button>
         </mat-form-field>
       </div>
 
-      <button mat-raised-button class="btn-inicio-sesion font2">Iniciar sesión</button>
+      <button mat-raised-button class="btn-inicio-sesion font2" type="submit">Iniciar sesión</button>
 
     </form>
 

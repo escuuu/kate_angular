@@ -1,20 +1,18 @@
 import { NgModule } from '@angular/core';
+//MATERIALES
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import {MatToolbarModule} from '@angular/material/toolbar';
-
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatMenuModule} from '@angular/material/menu';
-
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-
+//COMPONENTES
 import { AppComponent } from './app.component';
 import { MenuComponent } from './views/menu/menu.component';
 import {PortadaComponent } from './views/portada/portada.component';
@@ -31,6 +29,11 @@ import { PaginaLoginComponent } from './views/pagina-login/pagina-login.componen
 import { PaginaRegistroComponent } from './views/pagina-registro/pagina-registro.component';
 
 
+//SERVICIOS
+import { LoginServiceService } from './shared/services/login-service.service';
+import { PaginaAppComponent } from './views/pagina-app/pagina-app.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +47,8 @@ import { PaginaRegistroComponent } from './views/pagina-registro/pagina-registro
     RegistroDialogComponent,
     PaginaMapaComponent,
     PaginaLoginComponent,
-    PaginaRegistroComponent
+    PaginaRegistroComponent,
+    PaginaAppComponent
 
   ],
 
@@ -65,7 +69,9 @@ import { PaginaRegistroComponent } from './views/pagina-registro/pagina-registro
     HttpClientModule
   ],
 
-  providers: [],
+  providers: [
+    LoginServiceService
+  ],
 
   bootstrap: [AppComponent]
 })
