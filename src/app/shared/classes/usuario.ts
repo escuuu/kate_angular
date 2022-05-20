@@ -1,9 +1,9 @@
 export class Usuario {
-  public correo: string;
-  public contrasena: string;
+  public nombre: string;
+  public password: string;
 
   constructor() {
-    this.correo = '';
-    this.contrasena = '';
+    this.nombre = '';
+    this.password = '';
   }
 }

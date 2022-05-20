@@ -1,6 +1,7 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
 import { Usuario } from 'src/app/shared/classes/usuario';
+import { ApiService } from 'src/app/shared/services/api.service';
 
 @Component({
   selector: 'app-pagina-login',
@@ -10,9 +11,8 @@ import { Usuario } from 'src/app/shared/classes/usuario';
 export class PaginaLoginComponent implements OnInit {
   public usuario : Usuario;
   hide = true;
-  email = new FormControl('', [Validators.required, Validators.email]);
 
-  constructor( ) {
+  constructor(private apiService: ApiService, private router: Router ) {
     this.usuario = new Usuario();
   }
 
@@ -20,12 +20,23 @@ export class PaginaLoginComponent implements OnInit {
   }
 
   login(): void{
-
+    this.apiService.login(this.usuario).subscribe(
+      data => {
+        console.log(data);
+        if(data.length == 0){
+          alert('Usuario incorrecto');
+        }
+        else {
+          this.router.navigate(['/sensores-app']);
+        }
+      },
+      error => {
+        console.error("Error al realizar el acceso");
+      }
+    )
   }
 
-  getErrorMessage() {
-    return this.email.hasError('email') ? 'Email no válido' : '';
-  }
+
 
 
 }

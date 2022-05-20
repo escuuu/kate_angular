@@ -30,8 +30,8 @@ import { PaginaRegistroComponent } from './views/pagina-registro/pagina-registro
 
 
 //SERVICIOS
-import { LoginServiceService } from './shared/services/login-service.service';
 import { PaginaAppComponent } from './views/pagina-app/pagina-app.component';
+import { ApiService } from './shared/services/api.service';
 
 
 @NgModule({
@@ -70,7 +70,7 @@ import { PaginaAppComponent } from './views/pagina-app/pagina-app.component';
   ],
 
   providers: [
-    LoginServiceService
+    ApiService
   ],
 
   bootstrap: [AppComponent]

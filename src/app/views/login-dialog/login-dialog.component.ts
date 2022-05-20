@@ -1,6 +1,9 @@
 import { Component, Inject } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Router } from '@angular/router';
+import { Usuario } from 'src/app/shared/classes/usuario';
+import { ApiService } from 'src/app/shared/services/api.service';
 import { RegistroDialogComponent } from '../registro-dialog/registro-dialog.component';
 
 @Component({
@@ -9,19 +12,16 @@ import { RegistroDialogComponent } from '../registro-dialog/registro-dialog.comp
   styleUrls: ['./login-dialog.component.css']
 })
 export class LoginDialogComponent {
+  public usuario : Usuario;
   hide = true;
-  email = new FormControl('', [Validators.required, Validators.email]);
-
 
   constructor(
     public dialogRef: MatDialogRef<LoginDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    public dialog: MatDialog
-  ) {}
-
-
-  getErrorMessage() {
-    return this.email.hasError('email') ? 'Email no válido' : '';
+    public dialog: MatDialog,
+    private apiService: ApiService, private router: Router
+  ) {
+    this.usuario = new Usuario();
   }
 
   openRegisterDialog() {
@@ -29,6 +29,24 @@ export class LoginDialogComponent {
       height: '600px',
       width: '450px'
     });
+  }
+
+  login(): void{
+    this.apiService.login(this.usuario).subscribe(
+      data => {
+        console.log(data);
+        if(data.length == 0) {
+          alert('Usuario incorrecto');
+        }
+        else {
+          this.router.navigate(['/sensores-app']);
+        }
+
+      },
+      error => {
+        console.error("Error al realizar el acceso");
+      }
+    )
   }
 
 

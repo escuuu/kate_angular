@@ -4,7 +4,7 @@
     function conectar() {
         include './conectar.php';
         $con = pg_connect("host=$host dbname=$dbname port=$port user=$user password=$password sslmode=$ssl connect_timeout=50");
-        $name = $_GET['name'];
+        $name = $_GET['nombre'];
         $password = $_GET['password'];
         $response = array();
         if ((isset($password) && empty($password) ? $password : null) || (isset($name) && empty($name) ? $name : null))  {
@@ -18,7 +18,7 @@
                 $saltedPassword = $sal . $password . $pim;
                 $finalpassword = hash('sha512', $saltedPassword);
                 $result = "";
-                $_SESSION['name']= $name;
+                $_SESSION['nombre']= $name;
                 $_SESSION['password']= $password;
                 if (!$con) {
                     die('Connection failed.');
@@ -44,7 +44,7 @@
         }
         echo json_encode($response);
         pg_close($con);
-        die(); 
+        die();
     }
     conectar();
 ?>

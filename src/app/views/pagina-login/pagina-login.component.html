@@ -5,14 +5,14 @@
     </div>
 
     <form (ngSubmit)="login()" #formLogin="ngForm">
-
       <div class="control-group">
         <mat-form-field appearance="outline" style="font-family: Josefin Sans;">
           <mat-label>Correo electrónico</mat-label>
           <input matInput placeholder="example@example.com"
-          [(ngModel)]="usuario.correo"
-          name="correo" [formControl]="email" required>
-          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          [(ngModel)]="usuario.nombre"
+          name="nombre"
+          #nombre="ngModel" required>
+          <mat-error *ngIf="nombre.invalid && nombre.dirty">Correo incorrecto</mat-error>
         </mat-form-field>
       </div>
 
@@ -20,10 +20,9 @@
         <mat-form-field appearance="outline" style="font-family: Josefin Sans;">
           <mat-label>Contraseña</mat-label>
           <input matInput [type]="hide ? 'password' : 'text'"
-          [(ngModel)]="usuario.contrasena"
+          [(ngModel)]="usuario.password"
           name="contrasena"
-          #contrasena="ngModel"
-          required>
+          #contrasena="ngModel" required>
           <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
             <mat-icon class="ver-contra">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
           </button>

@@ -21,6 +21,7 @@ html,body{
 .explicacion-calidad-aire .texto {
   font-size: 25px;
   line-height: 60px;
+  font-weight: 300;
   color: #2b2e4d;
   text-align: justify;
 }
@@ -59,8 +60,9 @@ h1 {
 
 .empeora-calidad {
   font-size: 25px;
+  font-weight: 300;
   line-height: 50px;
-  color: #939393;
+  color: #666666;
 }
 
 .empeora-calidad-aire {
