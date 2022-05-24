@@ -10,8 +10,8 @@
         <input matInput placeholder="example@example.com"
         [(ngModel)]="usuario.nombre"
         name="nombre"
-        #nombre="ngModel" required>
-        <mat-error *ngIf="nombre.invalid && nombre.dirty">Correo incorrecto</mat-error>
+        [formControl]="nombre" required>
+        <mat-error *ngIf="nombre.invalid">{{getErrorMessage()}}</mat-error>
       </mat-form-field>
     </div>
 

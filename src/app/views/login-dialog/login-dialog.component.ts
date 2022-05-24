@@ -14,6 +14,7 @@ import { RegistroDialogComponent } from '../registro-dialog/registro-dialog.comp
 export class LoginDialogComponent {
   public usuario : Usuario;
   hide = true;
+  nombre = new FormControl('', [Validators.required, Validators.email]);
 
   constructor(
     public dialogRef: MatDialogRef<LoginDialogComponent>,
@@ -29,6 +30,14 @@ export class LoginDialogComponent {
       height: '600px',
       width: '450px'
     });
+  }
+
+  getErrorMessage() {
+    if (this.nombre.hasError('required')) {
+      return 'You must enter a value';
+    }
+
+    return this.nombre.hasError('email') ? 'Not a valid email' : '';
   }
 
   login(): void{
