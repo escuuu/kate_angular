@@ -1,11 +1,31 @@
   <mat-toolbar>
     <mat-toolbar-row class="primera_toolbar">
-      <a mat-button routerLink="/inicio">
-        <img src="assets/KATEWHITE.png" height="30">
-      </a>
-      <span class="example-spacer"></span>
+        <button mat-flat-button class="btn_tool" id="inicio-button" aria-label="Example icon-button with heart icon">
+          <span class="inicio_class font2" routerLink="/inicio">INICIO</span>
+        </button>
+        <span class="example-spacer"></span>
 
-    <button mat-icon-button [matMenuTriggerFor]="beforeMenu">
+        <button mat-flat-button class="btn_tool" aria-label="Example icon-button with heart icon">
+          <span class="inicio_class font2" routerLink="/calidad-aire">CALIDAD DEL AIRE</span>
+        </button>
+        <span class="example-spacer"></span>
+        <a mat-button routerLink="/inicio">
+          <img src="assets/KATEWHITE.png" height="35">
+        </a>
+        <span class="example-spacer"></span>
+        <button mat-flat-button class="btn_tool" >
+          <span class="inicio_class font2" routerLink="/ubicanos">CONTÁCTANOS</span>
+        </button>
+        <span class="example-spacer"></span>
+
+        <button mat-flat-button class="btn_tool" id="login-button" (click)="openLoginDialog()">
+          <span class="inicio_class font2">
+            INICIO SESIÓN<mat-icon>person</mat-icon>
+          </span>
+        </button>
+      <!-- <span class="example-spacer"></span> -->
+
+    <!-- <button mat-icon-button [matMenuTriggerFor]="beforeMenu">
       <mat-icon class="menu-icon-button">menu</mat-icon>
     </button>
 
@@ -16,11 +36,11 @@
       <button mat-menu-item class="inicio_class icon font2" routerLink="/iniciar-sesion">Iniciar sesión
         <mat-icon>person</mat-icon>
       </button>
-    </mat-menu>
+    </mat-menu> -->
 
   </mat-toolbar-row>
   </mat-toolbar>
 
-  
+
 
 

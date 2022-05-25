@@ -3,7 +3,7 @@
     <img src="assets/KATEWHITE.png" height="100">
   </div>
 
-  <form (ngSubmit)="login()" #formLogin="ngForm">
+  <form #formLogin="ngForm">
     <div class="control-group">
       <mat-form-field appearance="outline" style="font-family: Josefin Sans;">
         <mat-label>Correo electrónico</mat-label>
@@ -28,7 +28,7 @@
       </mat-form-field>
     </div>
 
-    <button mat-raised-button class="btn-inicio-sesion font2" type="submit">Iniciar sesión</button>
+    <button mat-raised-button class="btn-inicio-sesion font2" (click)="login()">Iniciar sesión</button>
 
   </form>
 

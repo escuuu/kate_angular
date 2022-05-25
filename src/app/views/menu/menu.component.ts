@@ -1,4 +1,6 @@
+import { LoginDialogComponent } from './../login-dialog/login-dialog.component';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  openLoginDialog(){
+    this.dialog.open(LoginDialogComponent, {
+      height: '600px',
+      width: '450px'
+    });
   }
 
 }

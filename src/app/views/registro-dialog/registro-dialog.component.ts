@@ -1,11 +1,10 @@
 import { ApiService } from 'src/app/shared/services/api.service';
 import { Component, Inject, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { MAT_DIALOG_DATA, MatDialogRef, MatDialog } from '@angular/material/dialog';
 import { Usuario } from 'src/app/shared/classes/usuario';
 import { Router } from '@angular/router';
-
-export const p = document.getElementById("p");
+import { LoginDialogComponent } from '../login-dialog/login-dialog.component';
 
 @Component({
   selector: 'app-registro-dialog',
@@ -18,7 +17,11 @@ export class RegistroDialogComponent implements OnInit {
   public usuario : Usuario;
 
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any, private apiService: ApiService, private router: Router) {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any,
+              private apiService: ApiService,
+              private router: Router,
+              private dialogRef : MatDialogRef<RegistroDialogComponent>,
+              private dialogLog : MatDialog) {
     this.usuario = new Usuario();
   }
 
@@ -34,15 +37,19 @@ export class RegistroDialogComponent implements OnInit {
     this.apiService.registro(this.usuario).subscribe(
       data => {
         console.log(data);
-        if(data[0].response == 'false'){
-          console.log(p?.innerHTML);
+        if(data == 'false'){
+          alert('El usuario ya está registrado');
         }
         else{
-          this.router.navigate(['/inicio-app'])
+          this.dialogRef.close();
+          this.dialogLog.open(LoginDialogComponent, {
+            height: '600px',
+            width: '450px'
+          });
         }
       },
       () => {
-
+        alert('La conexión a la base de datos ha  fallado');
       }
     )
   }

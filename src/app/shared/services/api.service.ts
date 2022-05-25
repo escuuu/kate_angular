@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 
 export class ApiService {
 
-  baseUrl:string = 'https://kate.yatuaire.ovh:444'
+  baseUrl = 'http://kate.yatuaire.ovh:444';
 
   constructor(private HttpClient: HttpClient) { }
 
@@ -28,7 +28,7 @@ export class ApiService {
     const nombre = usuario.nombre;
     const password = usuario.password;
 
-    this.baseUrl = this.baseUrl + '/registro.php?name=' +nombre+ '&password='+password;
+    this.baseUrl = this.baseUrl + '/registro2.php?name=' +nombre+ '&password='+password;
     const resultado = this.HttpClient.get<any>(this.baseUrl);
 
     return resultado;

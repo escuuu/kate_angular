@@ -4,11 +4,15 @@ mat-toolbar {
   left: 0;
   right: 0;
   z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .primera_toolbar {
-  background-color: #2b2e4d;
-  height: 70px;
+  background-color: #000000;
+  -webkit-box-shadow: 0px 3px 26px 1px rgba(145,145,145,0.84);
+  box-shadow: 0px 3px 26px 1px rgba(145,145,145,0.84);
 }
 
 .example-spacer {
@@ -20,17 +24,21 @@ mat-toolbar {
   visibility: collapse;
 }
 
+.btn_tool {
+  height: 30px;
+  background-color: transparent;
+}
+
 .inicio_class:hover {
-  border-bottom: 3px solid rgb(5, 243, 37);
-  color: rgb(9, 145, 54);
+  color: #92e2eb;
   cursor: pointer;
   font-size: 13px;
 }
 
 .inicio_class {
   font-size: 13px;
-  color: #2b2e4d;
-  font-weight: 600;
+  color: #ffffff;
+  font-weight: 300;
 }
 
 

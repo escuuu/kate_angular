@@ -36,7 +36,6 @@ export class LoginDialogComponent {
     if (this.nombre.hasError('required')) {
       return 'You must enter a value';
     }
-
     return this.nombre.hasError('email') ? 'Not a valid email' : '';
   }
 
@@ -48,11 +47,11 @@ export class LoginDialogComponent {
           alert('Usuario incorrecto');
         }
         else {
+          this.dialogRef.close();
           this.router.navigate(['/sensores-app']);
         }
-
       },
-      error => {
+      () => {
         console.error("Error al realizar el acceso");
       }
     )
