@@ -51,13 +51,6 @@ export class PaginaMapaComponent implements OnInit {
                     const marker_princi = L.marker([this.lat, this.lon], {icon: myIcon}).addTo(mapa_princi).bindPopup("<strong style='color:black'>C/ "+name+"</strong>"+"<br>"+"<a class='inicio_class font2' href='mailto:administracion@mulesol.es?Subject=Solicito información'>Contactar por email</a>"+"<br>"+"<strong style='color:black'>Tlfn: "+ tlfn+"</strong>");
                     marker_princi.openPopup();
   }
-
-  openLoginDialog() {
-    this.dialog.open(LoginDialogComponent, {
-      height: '600px',
-      width: '450px'
-    })
-  }
 }
 
 

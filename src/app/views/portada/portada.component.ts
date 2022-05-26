@@ -9,25 +9,14 @@ import {
   transition,
   // ...
 } from '@angular/animations';
+import * as Aos from 'aos';
 
 
 
 @Component({
   selector: 'app-portada',
   templateUrl: './portada.component.html',
-  styleUrls: ['./portada.component.css'],
-  // animations: [
-  //   trigger( 'popOverState', [
-  //     state('show', style({
-  //       opacity: 1
-  //     })),
-  //     state('hide', style({
-  //       opacity: 0
-  //     })),
-  //     transition('show => hide', animate('600ms ease-out')),
-  //     transition('hide => show', animate('1000ms ease-in'))
-  //   ])
-  // ]
+  styleUrls: ['./portada.component.css']
 })
 export class PortadaComponent implements OnInit {
   // show = false;
@@ -35,12 +24,8 @@ export class PortadaComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    // this.show = !this.show;
+    Aos.init();
   }
-
-  // get stateName() {
-  //   return this.show ? 'show' : 'hide'
-  // }
 
     openLoginDialog() {
       this.dialog.open(LoginDialogComponent, {

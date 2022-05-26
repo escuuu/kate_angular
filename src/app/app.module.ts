@@ -15,7 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 //COMPONENTES
 import { AppComponent } from './app.component';
 import { MenuComponent } from './views/menu/menu.component';
-import {PortadaComponent } from './views/portada/portada.component';
+import { PortadaComponent } from './views/portada/portada.component';
 import { ProductoComponent } from './views/portada/producto/producto.component';
 import { FuncionalidadComponent } from './views/portada/funcionalidad/funcionalidad.component';
 import { AppRoutingModule } from './app-routing.module';
