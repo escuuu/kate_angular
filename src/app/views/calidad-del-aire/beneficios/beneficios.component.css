@@ -5,227 +5,157 @@ html,body{
   margin: 0;
 }
 
+.titulo_producto {
+  font-size: 30px;
+  font-weight: 900;
+  color: #000000;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:6%;
+  margin-bottom: 5%;
+}
+
 #contenido {
-  margin: 7% 7% 0 4%;
+  margin: 5% 7% 0 7%;
+}
+
+.contenido-centrado {
+  text-align: center;
+}
+
+.subrayado {
+  background-image: linear-gradient(120deg, rgba(100, 205, 216, 0.5) 0%, rgba(108, 208, 186, 0.5) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 88%;
+  background-position: 0 88%;
+}
+
+.imagenes-kate {
+  margin: 3% 5% 0 5%;
+}
+
+.imagenes-kate .columna2 {
+  margin: 3% 22% 0 22%;
+}
+
+.sensor-explicacion {
+  margin-top: 10%;
+  font-size: 20px;
+  color: #000000;
+  font-weight: 700;
+}
+
+.kate-explicacion {
+  margin-top: 7%;
+  text-align: center;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.imagenes-kate .columna1 {
+  display: flex;
+  margin-bottom: 6%;
+}
+
+.linea1 {
+  flex: 1;
+  background-color:rgba(181, 181, 181, 0.09);
+  padding: 50px 40px 30px 40px;
+  border-radius: 10px;
+}
+
+.imagenes-kate .columna2 {
+  display: flex;
+  margin-bottom: 3%;
+}
+
+.linea2 {
+  flex: 1;
+  background-color:rgba(181, 181, 181, 0.09);
+  padding: 50px 40px 30px 40px;
+  border-radius: 10px;
 }
 
 .example-spacer {
-  margin: 0 10% 0 10%;
+  flex: 1;
 }
+
 .explicacion-calidad-aire {
   position: static;
   display: flex;
-  margin-bottom: 5%;
+  margin: 0 4% 10% 4%;
 }
 
-.explicacion-calidad-aire .texto {
-  font-size: 25px;
-  line-height: 60px;
+.example-spacer1 {
+  margin: 0 7% 0 12%;
+}
+
+.texto {
+  font-size: 22px;
+  line-height: 35px;
   font-weight: 300;
   color: #2b2e4d;
   text-align: justify;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 50px;
 }
 
-.imagen {
-  height: 250px;
+.texto2{
+  font-weight: 900;
+}
+
+.fondo {
+  height: 400px;
 }
 
 .beneficios {
-  margin-bottom: 5%;
+  margin-bottom: 10%;
 }
 
-.beneficios-calidad-aire {
-  display: flex;
-}
-
-.example-spacer2 {
-  margin: 0 15% 0 13%;
-}
-
-.imagen2 {
-  height: 300px;
-}
-
-.lista-beneficios {
-  font-size: 25px;
-  line-height: 50px;
-  color: #2b2e4d;
-  font-weight: 200;
-}
-
-h1 {
+.beneficios > h1 {
   font-family: 'Josefin Sans';
   font-size: 30px;
+  margin-bottom: 5%;
+  font-weight: 900;
+}
+
+.empeora{
+  text-align: center;
+  margin: 0 10% 10% 10%;
 }
 
 .empeora-calidad {
   font-size: 25px;
   font-weight: 300;
-  line-height: 50px;
-  color: #666666;
+  line-height: 35px;
 }
 
-.empeora-calidad-aire {
+.empeora > h1 {
+  font-family: 'Josefin Sans';
+  font-size: 30px;
+  margin-bottom: 1%;
+  font-weight: 900;
+}
+
+.gases-contaminantes {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5% 10% 0 10%;
+  font-size: 27px;
 }
 
-.imagen3 {
-  margin-top: 3%;
-  height: 300px;
+.col1 {
+  text-align: left;
+  line-height: 35px;
 }
 
-.example-spacer3 {
-  margin: 0 40% 0 15%;
-}
-
-.empeora {
-  margin-bottom: 4%;
-}
-
-@media screen and (max-width: 1400px){
-
-  .explicacion-calidad-aire .texto {
-    font-size: 20px;
-    line-height: 40px;
-  }
-
-  .imagen {
-    height: 200px;
-  }
-
-  h1 {
-    font-size: 27px;
-  }
-
-  .lista-beneficios {
-    font-size: 20px;
-    line-height: 40px;
-  }
-
-  .imagen2 {
-    height: 250px;
-  }
-
-  .example-spacer2 {
-    margin: 0 8% 0 10%;
-  }
-
-  .empeora-calidad {
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  .imagen3 {
-    margin-top: 3%;
-    height: 250px;
-  }
-
-  .example-spacer3 {
-    margin: 0 30% 0 18%;
-  }
-}
-
-@media screen and (max-width: 1050px){
-
-  .explicacion-calidad-aire {
-    position: static;
-    display: flex;
-    margin-bottom: 4%;
-  }
-
-  .explicacion-calidad-aire .texto {
-    font-size: 18px;
-    line-height: 30px;
-  }
-
-  .imagen {
-    height: 180px;
-  }
-
-  .lista-beneficios {
-    font-size: 18px;
-    line-height: 35px;
-  }
-
-  .imagen2 {
-    height: 200px;
-  }
-
-  .example-spacer2 {
-    margin: 0 5% 0 5%;
-  }
-
-  .empeora-calidad {
-    font-size: 17px;
-    line-height: 30px;
-  }
-
-  .imagen3 {
-    margin-top: 3%;
-    height: 200px;
-  }
-
-  .example-spacer3 {
-    margin: 0 25% 0 18%;
-  }
-}
-
-@media screen and (max-width: 850px){
-
-  #contenido {
-    margin: 5% 10% 0 10%;
-  }
-
-  .example-spacer {
-    margin: 0 0 0 0;
-  }
-
-  .explicacion-calidad-aire {
-    position: static;
-    display: block;
-    margin-bottom: 5%;
-  }
-
-  .beneficios {
-    margin-bottom: 10%;
-  }
-
-  .contenido-centrado {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-
-  .beneficios-calidad-aire {
-    display: block;
-  }
-
-  .example-spacer2 {
-    margin: 0;
-  }
-
-  .example-spacer3{
-      margin: 0 0% 0 0%;
-  }
-
-  .empeora-calidad-aire {
-    flex-direction: column;
-  }
-}
-
-@media screen and (max-width:750px) {
-  .empeora-calidad-aire {
-    flex-direction: column;
-  }
-
-  .imagen3{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 170px;
-    height: 170px;
-  }
+.col2 {
+  text-align: left;
+  line-height: 35px;
 }
