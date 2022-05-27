@@ -1,5 +1,52 @@
-<h1>¿Dónde estamos?</h1>
-<div id="contenido-centrado">
+<img src="assets/cielo_azul.png"  class="img_logo"/>
+<h1>¿DÓNDE ESTAMOS?</h1>
+
+<div class="contenido-form">
+  <div class="form1">
+    <form>
+      <div class="contenido-grupo">
+        <mat-form-field appearance="outline" style="font-family: Josefin Sans;">
+          <mat-label>Nombre</mat-label>
+          <input matInput placeholder="Placeholder">
+        </mat-form-field>
+      </div>
+
+      <div class="contenido-grupo">
+        <mat-form-field appearance="outline" style="font-family: Josefin Sans;">
+          <mat-label>Apellidos</mat-label>
+          <input matInput placeholder="Placeholder">
+        </mat-form-field>
+      </div>
+
+      <div class="contenido-grupo">
+        <mat-form-field appearance="outline" style="font-family: Josefin Sans;">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Placeholder">
+        </mat-form-field>
+      </div>
+      <div class="contenido-grupo">
+        <mat-form-field appearance="outline" style="font-family: Josefin Sans;">
+          <mat-label>Teléfono</mat-label>
+          <input matInput placeholder="Placeholder">
+        </mat-form-field>
+      </div>
+    </form>
+  </div>
+  <span class="example-spacer"></span>
+  <div class="form2">
+    <form>
+      <div class="contenido-grupo">
+        <mat-form-field appearance="outline" class="form-mensaje">
+          <mat-label>Mensaje</mat-label>
+          <textarea matInput></textarea>
+        </mat-form-field>
+      </div>
+    </form>
+  </div>
+</div>
+<button mat-button >CONTACTAR</button>
+
+<div class="contenido-mapa">
   <div class="map-container">
     <div class="map-frame">
       <div id="map"></div>

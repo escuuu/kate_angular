@@ -14,7 +14,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
 }
 
 mat-dialog-container {
-  background-color: #000000!important;
+  background-color: #000000b9!important;
   overflow: hidden !important;
 }
 
@@ -23,7 +23,8 @@ mat-dialog-container {
 }
 
 .mat-form-field-label{
-  color: rgb(255, 255, 255) !important;
+  color: #51a8b1 !important;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 

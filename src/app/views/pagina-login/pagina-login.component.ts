@@ -7,7 +7,8 @@ import { FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-pagina-login',
   templateUrl: './pagina-login.component.html',
-  styleUrls: ['./pagina-login.component.css']
+  styleUrls: ['./pagina-login.component.css'],
+  providers: [ApiService]
 })
 export class PaginaLoginComponent implements OnInit {
 

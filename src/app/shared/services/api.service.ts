@@ -1,6 +1,8 @@
 import { Usuario } from './../classes/usuario';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/internal/Observable';
+
 
 @Injectable({
   providedIn: 'root'
@@ -8,28 +10,26 @@ import { Injectable } from '@angular/core';
 
 export class ApiService {
 
-  baseUrl = 'http://kate.yatuaire.ovh:444';
+  baseUrl = 'http://kate.yatuaire.com:444';
 
-  constructor(private HttpClient: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  public login(usuario: Usuario) {
+  public login(usuario: Usuario) : Observable<any> {
 
     const nombre = usuario.nombre;
     const password = usuario.password;
 
-    this.baseUrl = this.baseUrl + '/login.php?name=' +nombre+ '&password='+password;
-    const resultado = this.HttpClient.get<any>(this.baseUrl);
+    const resultado = this.http.get<any>('/login.php?name=' +nombre+ '&password='+password);
 
     return resultado;
   }
 
-  public registro(usuario: Usuario) {
+  public registro(usuario: Usuario): Observable<any> {
 
     const nombre = usuario.nombre;
     const password = usuario.password;
-
-    this.baseUrl = this.baseUrl + '/registro2.php?name=' +nombre+ '&password='+password;
-    const resultado = this.HttpClient.get<any>(this.baseUrl);
+    
+    const resultado = this.http.get<any>('/registro.php?name=' +nombre+ '&password='+password);
 
     return resultado;
   }

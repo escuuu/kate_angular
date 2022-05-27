@@ -1,27 +1,6 @@
 <?php
     function registro() {
-        //include './src/php/conectar-ovh.php';
-        // $host = "";
-        // $user = "";
-        // $password = ""
-        // $dbname = "";
-        // $port = "";
-        // $ssl = "";
-        // $bbdd = $_GET['bd'];
-        // if($bbdd == 'ovh'){
-        //   // include('./conectar-ovh.php');
-          $host = "backup1.miyuneta.es";
-          $user = "demo";
-          $password = "mulesol_2021";
-          $dbname = "mulesol_prod";
-          $port = "5432";
-          $ssl = "require";
-        //   //return 'Entra en ovh';
-        // }
-        // else {
-        //   include('./conectar-com.php');
-        //   // return 'Entra en .com';
-        // }
+        include '/conectar.php';
         $dbconn = pg_connect("host=$host dbname=$dbname port=$port user=$user password=$password sslmode=$ssl connect_timeout=50") or die('No se ha podido conectar: ' . pg_last_error());
         if($dbconn) {
             $name = $_GET['name'];

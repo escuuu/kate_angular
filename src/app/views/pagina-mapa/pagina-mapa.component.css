@@ -5,48 +5,84 @@ html,body{
   margin: 0;
 }
 
-#contenido-centrado {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.img_logo {
   width: 100%;
-  height: 100%;
+  height: 750px;
+  -webkit-box-shadow: 0px 3px 26px 1px rgba(145,145,145,0.5);
+  box-shadow: 0px 3px 26px 1px rgba(145,145,145,0.5);
 }
 
 h1 {
   margin-top: 7%;
   text-align: center;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 70px;
-  color: #2b2e4d;
+  font-size: 35px;
+  color: #000000;
   z-index: 4000;
-  letter-spacing: 3px;
   font-weight: 600;
 }
 
-.map-container {
-  position: absolute;
+mat-form-field {
+  width: 300px;
+}
+.mat-form-field-label{
+  color: rgb(0, 0, 0);
+}
+
+.contenido-form {
+  display: flex;
+  margin: 5% 30% 0 30%;
+}
+.example-spacer {
+  flex: 1;
+}
+
+.form1 {
+  display: block;
+}
+
+.contenido-grupo {
+  margin-bottom: 5%;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.604);
+}
+
+input {
+  color: rgb(0, 0, 0);
+}
+
+.form-mensaje {
+  width: 300px;
+  height: 300px;
+}
+
+.contenido-mapa {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 1%;
+  width: 100%;
+  height: 40%;
+  margin-top: 10%;
+}
+
+.map-container {
+  position: relative;
+  display: block;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  margin: 12% 5% 2% 5%;
+  width: 100%;
+  height: 100%;
 }
 
 .map-frame {
-  border-radius: 20px;
-  border: 3px solid #2b2e4d;
   height: 100%;
-  width: 70%;
-  -webkit-box-shadow: 0px 0px 32px 11px #9d9d9d;
-  box-shadow: 0px 0px 32px 11px #9d9d9d;
 }
 
 #map {
-  border-radius: 20px;
   height: 100%;
 }
 
