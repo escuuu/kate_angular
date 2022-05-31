@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { LoginDialogComponent } from './../login-dialog/login-dialog.component';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -8,8 +9,9 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+  constructor(private dialog: MatDialog, private router :  Router) { }
 
-  constructor(private dialog: MatDialog) { }
+  inicio_style = 'inicio_class';
 
   ngOnInit(): void {
   }
@@ -20,6 +22,15 @@ export class MenuComponent implements OnInit {
       width: '450px'
     });
   }
+
+  submit() {
+    if(this.inicio_style == 'inicio_class') {
+      this.inicio_style = 'inicio_class_pulsado';
+    } else {
+      this.inicio_style = 'inicio_class';
+    }
+  }
+
 
 }
 

@@ -1,15 +1,19 @@
 .footer {
-  background-color: #000000;
+  background-color: #ffffff;
   height: 40px;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   bottom: 0;
   z-index: 5000;
+  -webkit-box-shadow: 0px -5px 15px 5px rgba(0,0,0,0.2);
+  box-shadow: 0px -5px 15px 5px rgba(0,0,0,0.2);
 }
 
-.footer .button {
-  color: white;
+.footer-button {
+  color: rgb(0, 0, 0);
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 600;
+  background-color: transparent;
 }

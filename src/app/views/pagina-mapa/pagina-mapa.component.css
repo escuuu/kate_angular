@@ -5,6 +5,23 @@ html,body{
   margin: 0;
 }
 
+.contenido-centrado {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.interiores {
+  position: absolute;
+  text-align: center;
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 900;
+  letter-spacing: 0.74px;
+  color: #000000;
+  margin-top: 17%;
+}
+
 .img_logo {
   width: 100%;
   height: 750px;
@@ -12,14 +29,16 @@ html,body{
   box-shadow: 0px 3px 26px 1px rgba(145,145,145,0.5);
 }
 
-h1 {
-  margin-top: 7%;
-  text-align: center;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 35px;
+
+.titulo_producto {
+  font-size: 30px;
+  font-weight: 900;
   color: #000000;
-  z-index: 4000;
-  font-weight: 600;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:6%;
 }
 
 mat-form-field {
@@ -55,7 +74,22 @@ input {
 
 .form-mensaje {
   width: 300px;
-  height: 300px;
+}
+
+.contacto {
+  margin-top: 2%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-contacto {
+  width: 500px;
+  height: 50px;
+  background-image: linear-gradient(120deg, rgb(255, 242, 0) 0%, rgb(255, 145, 0) 100%);
+  font-weight: 600;
+  font-size: 15px;
 }
 
 .contenido-mapa {
@@ -64,7 +98,7 @@ input {
   align-items: center;
   width: 100%;
   height: 40%;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .map-container {

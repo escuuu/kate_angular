@@ -25,13 +25,6 @@ html,body{
   text-align: center;
 }
 
-.subrayado {
-  background-image: linear-gradient(120deg, rgba(0, 204, 255, 0.623) 0%, rgba(35, 255, 182, 0.589) 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 88%;
-  background-position: 0 88%;
-}
-
 .imagenes-kate {
   margin: 3% 5% 0 5%;
 }

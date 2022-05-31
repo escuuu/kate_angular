@@ -1,9 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import * as L from 'leaflet';
 import 'leaflet-routing-machine';
-import { icon, Marker } from 'leaflet';
 import { MatDialog } from '@angular/material/dialog';
-import { LoginDialogComponent } from '../login-dialog/login-dialog.component';
+import * as Aos from 'aos';
 
 export const DEFAULT_LAT = 40.31855159471087;
 export const DEFAULT_LON =  -3.755234181416796;
@@ -24,6 +23,7 @@ export class PaginaMapaComponent implements OnInit {
 
   ngOnInit(): void {
     this.initMap();
+    Aos.init();
   }
 
   private initMap(): void {

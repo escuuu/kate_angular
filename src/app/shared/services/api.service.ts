@@ -1,5 +1,5 @@
 import { Usuario } from './../classes/usuario';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 
@@ -10,7 +10,7 @@ import { Observable } from 'rxjs/internal/Observable';
 
 export class ApiService {
 
-  baseUrl = 'http://kate.yatuaire.com:444';
+  baseUrl = 'https://kate.yatuaire.com:444';
 
   constructor(private http: HttpClient) { }
 
@@ -19,7 +19,9 @@ export class ApiService {
     const nombre = usuario.nombre;
     const password = usuario.password;
 
-    const resultado = this.http.get<any>('/login.php?name=' +nombre+ '&password='+password);
+    this.baseUrl = this.baseUrl + '/login.php?name=' +nombre+ '&password='+password;
+
+    const resultado = this.http.get<any>(this.baseUrl);
 
     return resultado;
   }
@@ -28,8 +30,10 @@ export class ApiService {
 
     const nombre = usuario.nombre;
     const password = usuario.password;
-    
-    const resultado = this.http.get<any>('/registro.php?name=' +nombre+ '&password='+password);
+
+    this.baseUrl = this.baseUrl + '/registro.php?name=' +nombre+ '&password='+password;
+
+    const resultado = this.http.get<any>(this.baseUrl);
 
     return resultado;
   }

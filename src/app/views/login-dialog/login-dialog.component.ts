@@ -34,9 +34,9 @@ export class LoginDialogComponent {
 
   getErrorMessage() {
     if (this.nombre.hasError('required')) {
-      return 'You must enter a value';
+      return 'Rellene este campo';
     }
-    return this.nombre.hasError('email') ? 'Not a valid email' : '';
+    return this.nombre.hasError('email') ? 'Email no válido' : '';
   }
 
   login(): void{

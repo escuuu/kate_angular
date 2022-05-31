@@ -1,21 +1,25 @@
   <mat-toolbar>
     <mat-toolbar-row class="primera_toolbar">
-        <button mat-flat-button class="btn_tool" id="inicio-button" aria-label="Example icon-button with heart icon">
-          <span class="inicio_class font2" routerLink="/inicio">INICIO</span>
+        <button mat-flat-button class="btn_tool" id="inicio-button">
+          <span [ngClass]="['inicio_style']" (click)="submit()" routerLink="/inicio">INICIO</span>
         </button>
         <span class="example-spacer"></span>
 
-        <button mat-flat-button class="btn_tool" aria-label="Example icon-button with heart icon">
+        <button mat-flat-button class="btn_tool">
           <span class="inicio_class font2" routerLink="/calidad-aire">CALIDAD DEL AIRE</span>
         </button>
+
         <span class="example-spacer"></span>
+
         <a mat-button routerLink="/inicio">
-          <img src="assets/KATEWHITE.png" height="35">
+          <img src="assets/sani-ki_logo.png" height="35">
         </a>
         <span class="example-spacer"></span>
+
         <button mat-flat-button class="btn_tool" >
           <span class="inicio_class font2" routerLink="/ubicanos">CONTÁCTANOS</span>
         </button>
+
         <span class="example-spacer"></span>
 
         <button mat-flat-button id="login-button" (click)="openLoginDialog()">
