@@ -1,46 +1,46 @@
   <mat-toolbar>
     <mat-toolbar-row class="primera_toolbar">
-        <button mat-flat-button class="btn_tool" id="inicio-button">
-          <span [ngClass]="['inicio_style']" (click)="submit()" routerLink="/inicio">INICIO</span>
+        <button mat-flat-button class="btn_tool" id="inicio-button" fxHide.lt-md>
+          <span [ngClass]="myClass ? 'inicio_class': 'inicio_class_pulsado'" (click)="colorido()" routerLink="/inicio">INICIO</span>
         </button>
         <span class="example-spacer"></span>
 
-        <button mat-flat-button class="btn_tool">
-          <span class="inicio_class font2" routerLink="/calidad-aire">CALIDAD DEL AIRE</span>
+        <button mat-flat-button class="btn_tool" fxHide.lt-md>
+          <span [ngClass]="myClass2 ? 'inicio_class': 'inicio_class_pulsado'" (click)="colorido()" routerLink="/calidad-aire">CALIDAD DEL AIRE</span>
         </button>
 
         <span class="example-spacer"></span>
 
         <a mat-button routerLink="/inicio">
-          <img src="assets/sani-ki_logo.png" height="35">
+          <img src="assets/sani-ki_logo.png" [ngClass]="myClass ? 'inicio_class': 'inicio_class_pulsado'" (click)="colorido()" height="35">
         </a>
         <span class="example-spacer"></span>
 
-        <button mat-flat-button class="btn_tool" >
-          <span class="inicio_class font2" routerLink="/ubicanos">CONTÁCTANOS</span>
+        <button mat-flat-button class="btn_tool" fxHide.lt-md>
+          <span [ngClass]="myClass3 ? 'inicio_class': 'inicio_class_pulsado'" (click)="colorido()" routerLink="/ubicanos">CONTÁCTANOS</span>
         </button>
 
         <span class="example-spacer"></span>
 
-        <button mat-flat-button id="login-button" (click)="openLoginDialog()">
+        <button mat-flat-button id="login-button" (click)="openLoginDialog()" fxHide.lt-md>
           <span class="login_class font2">
             INICIAR SESIÓN
           </span>
         </button>
       <!-- <span class="example-spacer"></span> -->
 
-    <!-- <button mat-icon-button [matMenuTriggerFor]="beforeMenu">
+    <button mat-icon-button [matMenuTriggerFor]="beforeMenu" fxHide.gt-sm>
       <mat-icon class="menu-icon-button">menu</mat-icon>
     </button>
 
     <mat-menu #beforeMenu="matMenu" xPosition="before">
-      <button mat-menu-item class="inicio_class icon font2" routerLink="/inicio">Inicio</button>
-      <button mat-menu-item class="inicio_class icon font2" routerLink="/calidad-aire">Calidad del aire</button>
-      <button mat-menu-item class="inicio_class icon font2" routerLink="/ubicanos">Contáctanos</button>
+      <button mat-menu-item [ngClass]="myClass ? 'inicio_class': 'inicio_class_pulsado'" (click)="colorido()" routerLink="/inicio">Inicio</button>
+      <button mat-menu-item [ngClass]="myClass2 ? 'inicio_class': 'inicio_class_pulsado'" (click)="colorido()" routerLink="/calidad-aire">Calidad del aire</button>
+      <button mat-menu-item [ngClass]="myClass3 ? 'inicio_class': 'inicio_class_pulsado'" (click)="colorido()" routerLink="/ubicanos">Contáctanos</button>
       <button mat-menu-item class="inicio_class icon font2" routerLink="/iniciar-sesion">Iniciar sesión
         <mat-icon>person</mat-icon>
       </button>
-    </mat-menu> -->
+    </mat-menu>
 
   </mat-toolbar-row>
   </mat-toolbar>

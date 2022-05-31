@@ -11,6 +11,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 //COMPONENTES
 import { AppComponent } from './app.component';
@@ -32,6 +33,7 @@ import { PaginaRegistroComponent } from './views/pagina-registro/pagina-registro
 //SERVICIOS
 import { PaginaAppComponent } from './views/pagina-app/pagina-app.component';
 import { ApiService } from './shared/services/api.service';
+
 
 
 @NgModule({
@@ -66,7 +68,8 @@ import { ApiService } from './shared/services/api.service';
     MaterialModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FlexLayoutModule
   ],
 
   providers: [

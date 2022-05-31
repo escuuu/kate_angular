@@ -20,8 +20,7 @@ mat-toolbar {
 }
 
 .menu-icon-button {
-  color: rgb(0, 0, 0);
-  visibility: collapse;
+  color: rgb(255, 145, 0);
 }
 
 .btn_tool:active {
@@ -51,17 +50,13 @@ mat-toolbar {
 }
 
 .inicio_class_pulsado {
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 13px;
   color: rgb(255, 145, 0);
   font-weight: 900;
 }
 
 
-@media screen and (max-width: 850px) {
-  .menu-icon-button {
-    visibility: visible;
-  }
-}
 
 
 
