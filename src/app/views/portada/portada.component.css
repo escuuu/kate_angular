@@ -34,7 +34,6 @@ html,body{
 }
 
 .kate-explicacion {
-  margin-top: 25%;
   text-align: center;
   font-size: 33px;
   font-weight: 300;
@@ -45,18 +44,6 @@ html,body{
 
 .interiores {
   font-size: 40px;
-  line-height: 60px;
-  font-weight: 900;
-}
-
-.kate_platform {
-  font-size: 33px;
-  color: #000000;
-  font-weight: 900;
-}
-
-.kate_monitorea {
-  margin-top: 45%;
   line-height: 60px;
   font-weight: 900;
 }
@@ -75,17 +62,7 @@ html,body{
 }
 
   .kate-explicacion {
-    margin-top: 30%;
     font-size: 25px;
-  }
-
-  .kate_platform {
-    font-size: 25px;
-  }
-
-  .kate_monitorea {
-    margin-top: 40%;
-    line-height: 50px;
   }
 }
 
@@ -103,21 +80,7 @@ html,body{
   }
 
   .kate-explicacion {
-    margin-top: 30%;
     font-size: 22px;
-  }
-
-  .kate_platform {
-    font-size: 22px;
-  }
-
-  .kate_monitorea {
-    margin-top: 35%;
-    line-height: 40px;
-  }
-
-  .img_maps {
-    height: 30px;
   }
 }
 
@@ -134,22 +97,9 @@ html,body{
   }
 
   .kate-explicacion {
-    margin-top: 40%;
     font-size: 22px;
   }
 
-  .kate_platform {
-    font-size: 22px;
-  }
-
-  .kate_monitorea {
-    margin-top: 40%;
-    line-height: 40px;
-  }
-
-  .img_maps {
-    height: 30px;
-  }
 }
 
 @media screen and (max-width: 650px) {
@@ -166,31 +116,19 @@ html,body{
   }
 
   .kate-explicacion {
-    margin-top: 45%;
     font-size: 18px;
-  }
-
-  .kate_platform {
-    font-size: 18px;
-  }
-
-  .kate_monitorea {
-    margin-top: 40%;
-    line-height: 30px;
-  }
-
-  .img_maps {
-    height: 25px;
   }
 }
 
 @media screen and (max-width: 420px) {
-  .img_logo {
-    height: 300px;
+
+  .interiores {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 900;
   }
 
-
-  .kate-explicacion {
-    margin-top: 15%;
+  .img_logo {
+    height: 300px;
   }
 }

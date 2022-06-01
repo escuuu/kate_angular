@@ -30,7 +30,7 @@ html,body{
   margin-top: 1%;
   font-size: 22px;
   font-weight: 300;
-  color: #575757;
+  color: #000000;
 }
 
 .imagenes-kate {
@@ -95,7 +95,7 @@ html,body{
   }
 
   .titulo_producto {
-    font-size: 40px;
+    font-size: 18px;
   }
 
   .explicacion_producto {
@@ -117,23 +117,25 @@ html,body{
 
 @media screen and (max-width: 1050px) {
   #contenido {
-    margin: 100px 30px 0 30px;
+    margin: 0 3% 0 3%;
   }
 
   .titulo_producto {
-    font-size: 40px;
+    font-size: 18px;
   }
 
   .explicacion_producto {
     font-size: 27px;
+    margin-top: 2%;
   }
 
   .ventajas-producto {
-    font-size: 17px;
+    font-size: 20px;
+    margin-top: 2%;
   }
 
-  .imagen {
-    height: 60px;
+  .imagenes-kate {
+    margin: 3% 4% 0 4%;
   }
 
   .sensor-explicacion {
@@ -164,10 +166,6 @@ html,body{
     margin-top: 7%;
     margin-bottom: 10%;
     font-size: 15px;
-  }
-
-  .imagen {
-    height: 90px;
   }
 
   .imagenes-kate {

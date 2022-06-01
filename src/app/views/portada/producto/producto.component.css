@@ -8,7 +8,7 @@ html,body{
 #contenido {
   width: 1000px auto;
   margin: 0 auto;
-  margin-top: 20%;
+  margin-top: 0%;
 }
 
 .contenido-centrado {
@@ -31,11 +31,11 @@ html,body{
   margin-top: 1%;
   font-size: 22px;
   font-weight: 300;
-  color: #575757;
+  color: #000000;
 }
 
 .imagenes-kate {
-  margin: 3% 20% 0 20%;
+  margin: 3% 15% 0 15%;
   display: flex;
 }
 
@@ -44,15 +44,16 @@ html,body{
 }
 
 .kate-monitor {
+  flex: 1;
   background-color:rgba(181, 181, 181, 0.09);
   padding: 50px 40px 50px 40px;
   border-radius: 10px;
   position: static;
-  display: inline-block;
+  display: block;
 }
 
 .example-spacer {
-  margin: 0 150px 0 150px;
+  flex: 1;
 }
 
 .sensor-explicacion {
@@ -78,7 +79,7 @@ html,body{
   }
 
   .titulo_producto {
-    font-size: 40px;
+    font-size: 18px;
   }
 
   .explicacion_producto {
@@ -90,7 +91,7 @@ html,body{
   }
 
   .imagenes-kate {
-    margin: 3% 15% 0 15%;
+    margin: 3% 10% 0 10%;
   }
 
   .imagen {
@@ -110,92 +111,187 @@ html,body{
 }
 
 @media screen and (max-width: 1050px) {
+
   #contenido {
-    margin: 0px 20px 0 20px;
+    margin: 0 3% 0 3%;
   }
 
   .titulo_producto {
-    font-size: 40px;
-  }
-
-  .explicacion_producto {
-    margin-top: 30px;
-    font-size: 23px;
-  }
-
-  .ventajas-producto {
     font-size: 18px;
   }
 
-  .imagenes-kate {
-    margin: 5% 15% 0 15%;
+  .explicacion_producto {
+    font-size: 27px;
+    margin-top: 2%;
   }
 
-  .example-spacer {
-    margin: 0 100px 0 100px;
+  .ventajas-producto {
+    font-size: 20px;
+    margin-top: 2%;
+  }
+
+  .imagenes-kate {
+    margin: 5% 10% 0 10%;
   }
 
   .imagen {
-    height: 150px;
+    height: 130px;
   }
 
   .sensor-explicacion {
-    font-size: 21px;
-    line-height: 30px;
-  }
-
-  .kate-monitor .explicacion {
-    font-size: 15px;;
+    font-size: 24px;
     line-height: 30px;
   }
 
 }
 
 @media screen and (max-width: 850px) {
+
   #contenido {
-    margin: 0px 10px 0 10px;
+    margin: 0 3% 0 3%;
   }
 
   .titulo_producto {
-    font-size: 30px;
+    font-size: 18px;
   }
 
   .explicacion_producto {
-    margin-top: 25px;
     font-size: 23px;
-    line-height: 30px;
+    margin-top: 2%;
   }
 
   .ventajas-producto {
-    margin-top: 7%;
-    font-size: 15px;
-  }
-
-  .sensor-explicacion {
-    font-size: 18px;
-    line-height: 2px;
-    margin-top: 10%;
-  }
-
-  .kate-monitor {
-    margin-top: 20%;
-  }
-
-  .kate-monitor .explicacion {
     font-size: 17px;
-    line-height: 25px;
-    margin-bottom: 20px;
-    margin-top: 30px;
+    margin-top: 2%;
   }
 
   .imagenes-kate {
-    display: block;
-    margin: 0% 10% 0 10%;
+    margin: 5% 25% 0 25%;
   }
 
-  .example-spacer {
-    margin: 0 0 0 0;
+  .imagen {
+    height: 130px;
+  }
+
+  .sensor-explicacion {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .imagenes-kate {
     flex-direction: column;
+  }
+
+  .kate-monitor {
+    padding: 50px 60px 50px 60px;
+  }
+
+  #platform {
+    margin-top: 20%;
+  }
+
+}
+
+@media screen and (max-width: 650px) {
+
+  #contenido {
+    margin: 0 3% 0 3%;
+  }
+
+  .titulo_producto {
+    font-size: 14px;
+  }
+
+  .explicacion_producto {
+    font-size: 18px;
+    margin-top: 2%;
+  }
+
+  .ventajas-producto {
+    font-size: 15px;
+    margin-top: 2%;
+  }
+
+  .imagenes-kate {
+    margin: 5% 15% 0 15%;
+  }
+
+  .imagen {
+    height: 130px;
+  }
+
+  .sensor-explicacion {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .imagenes-kate {
+    flex-direction: column;
+  }
+
+  .kate-monitor {
+    padding: 50px 60px 50px 60px;
+  }
+
+  #platform {
+    margin-top: 20%;
+  }
+
+}
+
+
+@media screen and (max-width: 450px) {
+
+  #contenido {
+    margin: 0 1% 0 1%;
+  }
+
+  .titulo_producto {
+    font-size: 14px;
+  }
+
+  .explicacion_producto {
+    font-size: 18px;
+    margin-top: 2%;
+  }
+
+  .ventajas-producto {
+    font-size: 15px;
+    margin-top: 2%;
+  }
+
+  .imagenes-kate {
+    margin: 5% 23% 0 23%;
+  }
+
+  .imagen {
+    height: 130px;
+  }
+
+  .sensor-explicacion {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .explicacion {
+    margin-top: 5%;
+    text-align: justify;
+    font-size: 1px;
+    line-height: 20px;
+    font-weight: 300;
+    color: #000000;
+  }
+  
+  .imagenes-kate {
+    flex-direction: column;
+  }
+
+  .kate-monitor {
+    padding: 30px 40px 30px 40px;
+  }
+
+  #platform {
+    margin-top: 20%;
   }
 
 }
