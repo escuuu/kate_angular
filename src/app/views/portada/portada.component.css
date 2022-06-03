@@ -52,7 +52,7 @@ html,body{
 
 .img_logo {
   width: 100%;
-  height: 650px;
+  height: 550px;
 }
 
 .interiores {
@@ -63,6 +63,10 @@ html,body{
 
   .kate-explicacion {
     font-size: 25px;
+  }
+
+  .app_producto {
+    margin-top: 8%;
   }
 }
 
@@ -99,7 +103,6 @@ html,body{
   .kate-explicacion {
     font-size: 22px;
   }
-
 }
 
 @media screen and (max-width: 650px) {
@@ -120,15 +123,16 @@ html,body{
   }
 }
 
-@media screen and (max-width: 420px) {
-
-  .interiores {
-    font-size: 18px;
-    line-height: 30px;
-    font-weight: 900;
-  }
+@media screen and (max-width: 450px) {
 
   .img_logo {
-    height: 300px;
+    width: 100%;
+    height: 450px;
+  }
+
+  .interiores {
+    font-size: 25px;
+    line-height: 40px;
+    font-weight: 900;
   }
 }
