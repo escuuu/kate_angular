@@ -1,8 +1,10 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Title } from '@angular/platform-browser';
 import * as Aos from 'aos';
 import { LoginDialogComponent } from '../login-dialog/login-dialog.component';
+
 
 @Component({
   selector: 'app-calidad-del-aire',
@@ -11,7 +13,9 @@ import { LoginDialogComponent } from '../login-dialog/login-dialog.component';
 })
 export class CalidadDelAireComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, titulo: Title) {
+    titulo.setTitle('Sani-Ki | Calidad del aire');
+  }
 
   ngOnInit(): void {
     Aos.init();

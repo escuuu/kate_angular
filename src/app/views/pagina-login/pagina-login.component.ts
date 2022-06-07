@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Usuario } from 'src/app/shared/classes/usuario';
 import { ApiService } from 'src/app/shared/services/api.service';
 import { FormControl, Validators } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-pagina-login',
@@ -16,7 +17,8 @@ export class PaginaLoginComponent implements OnInit {
   hide = true;
   nombre = new FormControl('', [Validators.required, Validators.email]);
 
-  constructor(private apiService: ApiService, private router: Router ) {
+  constructor(private apiService: ApiService, private router: Router, titulo: Title ) {
+    titulo.setTitle('Sani-Ki | Iniciar Sesión');
     this.usuario = new Usuario();
   }
 

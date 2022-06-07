@@ -33,10 +33,10 @@ mat-form-field {
 }
 
 ::placeholder {
-  color: white;
+  color: rgb(0, 0, 0);
   opacity: 0.6;
 }
 
 input {
-  color: white;
+  color: rgb(0, 0, 0);
 }

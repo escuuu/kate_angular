@@ -3,6 +3,7 @@ import * as L from 'leaflet';
 import 'leaflet-routing-machine';
 import { MatDialog } from '@angular/material/dialog';
 import * as Aos from 'aos';
+import { Title } from '@angular/platform-browser';
 
 export const DEFAULT_LAT = 40.31855159471087;
 export const DEFAULT_LON =  -3.755234181416796;
@@ -19,7 +20,9 @@ export class PaginaMapaComponent implements OnInit {
   @Input() lat: number = DEFAULT_LAT;
   @Input() lon: number = DEFAULT_LON;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, titulo: Title) {
+    titulo.setTitle('Sani-Ki | Contacto');
+  }
 
   ngOnInit(): void {
     this.initMap();

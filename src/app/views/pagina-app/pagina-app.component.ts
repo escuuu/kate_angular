@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/shared/services/api.service';
 
 @Component({
   selector: 'app-pagina-app',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginaAppComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService: ApiService){
+  }
 
   ngOnInit(): void {
+    this.apiService.disparadorUsuario.subscribe(
+      data => {
+        console.log('Recibiendo data...', data);
+      }
+    )
+
   }
 
 }

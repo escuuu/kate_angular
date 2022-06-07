@@ -1,6 +1,6 @@
 import { Usuario } from './../classes/usuario';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { EventEmitter, Injectable, Output } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 
 
@@ -10,7 +10,9 @@ import { Observable } from 'rxjs/internal/Observable';
 
 export class ApiService {
 
-  baseUrl = 'https://kate.yatuaire.com:444';
+  @Output() disparadorUsuario: EventEmitter<any> = new EventEmitter();
+
+  baseUrl = 'https://sani-ki.yatuaire.ovh:444';
 
   constructor(private http: HttpClient) { }
 

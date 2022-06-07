@@ -1,33 +1,35 @@
+<app-menu></app-menu>
 <div id="contenido-centrado">
   <div class="login">
     <div class="titulo font2">
-      <img src="assets/KATEWHITE.png" height="100">
+      <img src="assets/sani-ki_logo.png" height="100">
     </div>
 
-    <form>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" novalidate>
       <div class="control-group">
         <mat-form-field appearance="outline" style="font-family: Josefin Sans;">
           <mat-label>Correo electrónico</mat-label>
-          <input matInput placeholder="example@example.com" [formControl]="email" required>
-          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          <input matInput placeholder="example@example.com" formControlName="email" name="email" [(ngModel)]="usuario.nombre" type="email">
+          <mat-error *ngIf="registerForm.value.email">Email no válido</mat-error>
         </mat-form-field>
       </div>
 
       <div class="control-group">
         <mat-form-field appearance="outline" style="font-family: Josefin Sans;">
           <mat-label>Contraseña</mat-label>
-          <input matInput [type]="hide ? 'password' : 'text'">
+          <input matInput type="password" name="password" formControlName="password" [(ngModel)]="usuario.password">
+          <mat-error *ngIf="registerForm.value.password">La contraseña debe tener mayúsculas, minúsculas, números y al menos 9 carácteres</mat-error>
         </mat-form-field>
       </div>
 
       <div class="control-group">
         <mat-form-field appearance="outline" style="font-family: Josefin Sans;">
-          <mat-label>Confirmar contraseña</mat-label>
-          <input matInput [type]="hide ? 'password' : 'text'">
+          <mat-label>Confirme contraseña</mat-label>
+          <input matInput type="password" name="confirmPassword" formControlName="confirmPassword" required pattern="{{registerForm.value.password}}">
+          <mat-error *ngIf="registerForm.value.confirmPassword">La contraseña no coincide</mat-error>
         </mat-form-field>
       </div>
-
-      <button mat-raised-button class="btn-inicio-sesion font2" routerLink="/iniciar-sesion">Registrarme</button>
+      <button mat-raised-button class="btn-inicio-sesion font2" type="submit">REGISTRARSE</button>
     </form>
 
   </div>

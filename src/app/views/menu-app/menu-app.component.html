@@ -1,0 +1,47 @@
+<mat-toolbar>
+  <mat-toolbar-row class="primera_toolbar">
+      <button mat-flat-button class="btn_tool" id="inicio-button" fxHide.lt-md>
+        <span class="inicio_class" routerLink="/sensores-app">SENSORES</span>
+      </button>
+      <span class="example-spacer"></span>
+
+      <button mat-flat-button class="btn_tool" fxHide.lt-md>
+        <span class="inicio_class" routerLink="/maps">MAPS</span>
+      </button>
+
+      <span class="example-spacer"></span>
+
+      <a mat-button>
+        <img class="inicio_class" src="assets/sani-ki_logo.png" height="65">
+      </a>
+      <span class="example-spacer"></span>
+
+      <button mat-flat-button class="btn_tool" fxHide.lt-md>
+        <span class="inicio_class">BIG DATA</span>
+      </button>
+
+      <span class="example-spacer"></span>
+
+      <button mat-flat-button id="login-button" fxHide.lt-md>
+        <span class="login_class font2">
+          CERRAR SESIÓN
+        </span>
+      </button>
+
+    <!-- <span class="example-spacer"></span> -->
+
+  <button mat-icon-button [matMenuTriggerFor]="beforeMenu" fxHide.gt-sm>
+    <mat-icon class="menu-icon-button">menu</mat-icon>
+  </button>
+
+  <mat-menu #beforeMenu="matMenu" xPosition="before">
+    <button mat-menu-item class="inicio_class">Inicio</button>
+    <button mat-menu-item class="inicio_class">Calidad del aire</button>
+    <button mat-menu-item class="inicio_class">Contáctanos</button>
+    <button mat-menu-item class="inicio_class icon font2">Iniciar sesión
+      <mat-icon>person</mat-icon>
+    </button>
+  </mat-menu>
+
+</mat-toolbar-row>
+</mat-toolbar>

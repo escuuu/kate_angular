@@ -29,11 +29,14 @@ import { RegistroDialogComponent } from './views/registro-dialog/registro-dialog
 import { PaginaMapaComponent } from './views/pagina-mapa/pagina-mapa.component';
 import { PaginaLoginComponent } from './views/pagina-login/pagina-login.component';
 import { PaginaRegistroComponent } from './views/pagina-registro/pagina-registro.component';
+import { MatInputModule } from '@angular/material/input';
 
 
 //SERVICIOS
 import { PaginaAppComponent } from './views/pagina-app/pagina-app.component';
 import { ApiService } from './shared/services/api.service';
+import { MenuAppComponent } from './views/menu-app/menu-app.component';
+import { MapsAppComponent } from './views/maps-app/maps-app.component';
 
 
 
@@ -51,8 +54,9 @@ import { ApiService } from './shared/services/api.service';
     PaginaMapaComponent,
     PaginaLoginComponent,
     PaginaRegistroComponent,
-    PaginaAppComponent
-
+    PaginaAppComponent,
+    MenuAppComponent,
+    MapsAppComponent
   ],
 
   imports: [
@@ -70,7 +74,8 @@ import { ApiService } from './shared/services/api.service';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatInputModule
   ],
 
   providers: [

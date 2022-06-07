@@ -3,7 +3,7 @@ mat-toolbar {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 5000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,8 +55,4 @@ mat-toolbar {
   color: rgb(255, 145, 0);
   font-weight: 900;
 }
-
-
-
-
 

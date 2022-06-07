@@ -40,14 +40,15 @@ export class LoginDialogComponent {
   }
 
   login(): void{
+
     this.apiService.login(this.usuario).subscribe(
       data => {
-        console.log(data);
         if(data.length == 0) {
           alert('Usuario incorrecto');
         }
         else {
           this.dialogRef.close();
+          this.apiService.disparadorUsuario.emit(data);
           this.router.navigate(['/sensores-app']);
         }
       },
@@ -56,6 +57,5 @@ export class LoginDialogComponent {
       }
     )
   }
-
 
 }

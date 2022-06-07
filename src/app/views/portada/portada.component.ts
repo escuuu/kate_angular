@@ -10,6 +10,7 @@ import {
   // ...
 } from '@angular/animations';
 import * as Aos from 'aos';
+import { Title } from '@angular/platform-browser';
 
 
 
@@ -19,9 +20,10 @@ import * as Aos from 'aos';
   styleUrls: ['./portada.component.css']
 })
 export class PortadaComponent implements OnInit {
-  // show = false;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, titulo: Title) {
+    titulo.setTitle('Sani-Ki Konnect');
+  }
 
   ngOnInit(): void {
     Aos.init();

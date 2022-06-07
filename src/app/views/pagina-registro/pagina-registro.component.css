@@ -10,23 +10,25 @@ html,body{
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 96.1%;
+  height: 96.7%;
   top: 0;
+  background-image: url('~src/assets/Respira.jpg');
+  background-size: 850px 1200px;
 }
 
 .login {
   margin: 20px auto;
   width: 400px;
   height: 550px;
-  background-color: #2b2e4d;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   border-radius: 20px;
-  border: 3px solid #51a8b1;
-  -webkit-box-shadow: 0px 0px 32px 11px #b0b0b0;
-  box-shadow: 0px 0px 32px 11px #b0b0b0;
+  border: 3px solid #ffb700;
+  -webkit-box-shadow: 0px 0px 32px 11px #39393970;
+  box-shadow: 0px 0px 32px 11px #39393970;
 }
 
 mat-form-field {
@@ -44,15 +46,16 @@ mat-form-field {
   }
 
 .btn-inicio-sesion {
-    background-color: #51a8b1;
-    color: white;
+    background-image: linear-gradient(120deg, rgb(255, 242, 0) 0%, rgb(255, 145, 0) 100%);
+    color: rgb(0, 0, 0);
     width: 300px;
     height: 50px;
+    font-weight: 600;
     display: flex;
     justify-content: center;
     align-items: center;
     bottom: 0;
-    font-size: 23px;
+    font-size: 20px;
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -72,12 +75,9 @@ mat-form-field {
 }
 
 input {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
-.ver-contra {
-  color: #51a8b1;
-}
 
 @media screen and (max-width: 420px) {
   #contenido-centrado {
