@@ -1,17 +1,9 @@
 <app-menu-app></app-menu-app>
 <div id="contenido">
   <div class="contenido-centrado">
-
-    <div class="busqueda">
-      <mat-form-field style="font-family: Josefin Sans;" appearance="outline">
-        <mat-label>Buscar dispositivo</mat-label>
-        <input matInput placeholder="Id, nombre del sensor, etc.">
-      </mat-form-field>
-      <button mat-flat-button class="btn-busqueda">
-        <mat-icon matSuffix >search</mat-icon>
-      </button>
-    </div>
-      <span class="font2"></span>
+    <span class="bienvenida font2">Bienvenido {{usuario_logueado.nombre}}</span>
   </div>
+  <span *ngIf="usuario_logueado.admin == 't'">Hola admin</span>
+  <span *ngIf="usuario_logueado.admin == 'f'">Hola no admin</span>
 </div>
 

@@ -1,23 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Usuario } from 'src/app/shared/classes/usuario';
 import { ApiService } from 'src/app/shared/services/api.service';
+import { LoginDialogComponent } from '../login-dialog/login-dialog.component';
 
 @Component({
   selector: 'app-pagina-app',
   templateUrl: './pagina-app.component.html',
   styleUrls: ['./pagina-app.component.css']
 })
-export class PaginaAppComponent implements OnInit {
+export class PaginaAppComponent implements OnInit, OnDestroy {
 
-  constructor(private apiService: ApiService){
+  public test: boolean = false
+  public usuario_logueado: Usuario = LoginDialogComponent.usuario_logueado;
+
+  constructor(){
   }
 
   ngOnInit(): void {
-    this.apiService.disparadorUsuario.subscribe(
-      data => {
-        console.log('Recibiendo data...', data);
-      }
-    )
+    console.log(this.usuario_logueado);
+  }
 
+  ngOnDestroy(): void {
+    
   }
 
 }

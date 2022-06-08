@@ -10,8 +10,6 @@ import { Observable } from 'rxjs/internal/Observable';
 
 export class ApiService {
 
-  @Output() disparadorUsuario: EventEmitter<any> = new EventEmitter();
-
   baseUrl = 'https://sani-ki.yatuaire.ovh:444';
 
   constructor(private http: HttpClient) { }

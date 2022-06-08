@@ -15,13 +15,13 @@ export class LoginDialogComponent {
   public usuario : Usuario;
   hide = true;
   nombre = new FormControl('', [Validators.required, Validators.email]);
+  static usuario_logueado: Usuario;
 
-  constructor(
-    public dialogRef: MatDialogRef<LoginDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    public dialog: MatDialog,
-    private apiService: ApiService, private router: Router
-  ) {
+  constructor(public dialogRef: MatDialogRef<LoginDialogComponent>,
+              @Inject(MAT_DIALOG_DATA) public data: any,
+              public dialog: MatDialog,
+              private apiService: ApiService, private router: Router)
+  {
     this.usuario = new Usuario();
   }
 
@@ -39,17 +39,18 @@ export class LoginDialogComponent {
     return this.nombre.hasError('email') ? 'Email no válido' : '';
   }
 
-  login(): void{
-
+  login():void {
     this.apiService.login(this.usuario).subscribe(
       data => {
         if(data.length == 0) {
           alert('Usuario incorrecto');
         }
         else {
+          this.usuario.admin = data[0].admin;
+          this.usuario.id = data[0].id;
           this.dialogRef.close();
-          this.apiService.disparadorUsuario.emit(data);
           this.router.navigate(['/sensores-app']);
+          LoginDialogComponent.usuario_logueado = this.usuario;
         }
       },
       () => {
