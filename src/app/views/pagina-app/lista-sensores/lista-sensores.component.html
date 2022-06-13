@@ -1,0 +1,77 @@
+<div id="contenido">
+  <div class="contenido-centrado">
+    <div class="barra-sensor font2">
+
+      <div class="header">
+        <div class="titulo font2">
+          <span>{{sensor.nombre_sensor}}</span>
+        </div>
+
+        <span class="example-spacer"></span>
+
+        <button mat-icon-button class="btn-edit" (click)="openEditDialog()">
+          <mat-icon>edit</mat-icon>
+        </button>
+
+      </div>
+
+      <div class="contenido">
+
+        <div class="co2-container">
+
+          <div class="nombre">
+            <span>CO2: <br>{{co2}}ppm</span>
+          </div>
+
+          <div  [ngClass]="{'circulo-bajo': co2_porcentaje < 20, 'circulo-medio': co2_porcentaje >= 20, 'circulo-alto': co2_porcentaje >= 50}">
+            <div data-aos="zoom-in" data-aos-duration="2000" [ngClass]="{'circulo-interior-bajo': co2_porcentaje < 20, 'circulo-interior-medio': co2_porcentaje >= 20, 'circulo-interior-alto': co2_porcentaje >= 50}"></div>
+          </div>
+
+        </div>
+        <span class="example-spacer"></span>
+
+        <div class="datos-container">
+          <div class="datos">
+            <button mat-button disabled><img src="assets/icons/thermometer.png">Temperatura: {{temp}} ºC</button><br><br>
+            <button mat-button disabled><img src="assets/icons/humidity.png">Humedad: {{humedad}} Hr</button>
+          </div>
+        </div>
+
+        <span class="example-spacer"></span>
+
+        <div class="bateria-container">
+          <div class="bateria">
+            <span class="titulo-bateria">BATERÍA</span>
+            <div class="bateria-completa">
+              <div class="tot"></div>
+              <div class="bateria-img">
+                  <div
+                    [ngClass]="{'bat-alta100': bat > 80, 'bat-alta80': bat <= 80, 'bat-alta60': bat <= 60, 'bat-alta40': bat <= 40, 'bat-alta20': bat <= 20, 'bat-alta0': bat <= 0 }">
+                  </div>
+                <span class="example-spacer"></span>
+                  <div
+                    [ngClass]="{'bat-alta100_2': bat > 80, 'bat-alta80_2': bat <= 80, 'bat-alta60_2': bat <= 60, 'bat-alta40_2': bat <= 40, 'bat-alta20_2': bat <= 20, 'bat-alta0_2': bat <= 0}">
+                  </div>
+                <span class="example-spacer"></span>
+                  <div
+                    [ngClass]="{'bat-media100': bat > 80, 'bat-media80': bat <= 80, 'bat-media60': bat <= 60, 'bat-media40': bat <= 40, 'bat-media20': bat <= 20, 'bat-media0': bat <= 0}">
+                  </div>
+                <span class="example-spacer"></span>
+                  <div
+                    [ngClass]="{'bat-media100_2': bat > 80, 'bat-media80_2': bat <= 80, 'bat-media60_2': bat <= 60, 'bat-media40_2': bat <= 40, 'bat-media20_2': bat <= 20, 'bat-media0_2': bat <=0}">
+                  </div>
+                <span class="example-spacer"></span>
+                  <div
+                    [ngClass]="{'bat-baja100': bat > 80, 'bat-baja80': bat <= 80, 'bat-baja60': bat <= 60, 'bat-baja40': bat <= 40, 'bat-baja20': bat <= 20, 'bat-baja0': bat <= 0}">
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+

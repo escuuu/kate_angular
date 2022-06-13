@@ -3,7 +3,9 @@
   <div class="contenido-centrado">
     <span class="bienvenida font2">Bienvenido {{usuario_logueado.nombre}}</span>
   </div>
-  <span *ngIf="usuario_logueado.admin == 't'">Hola admin</span>
-  <span *ngIf="usuario_logueado.admin == 'f'">Hola no admin</span>
+  <div *ngIf="test == true">
+    <app-lista-sensores *ngFor="let sensor of listadoSensores" [sensor]="sensor"></app-lista-sensores>
+  </div>
+  <span *ngIf="test == false">Hola admin</span>
 </div>
 

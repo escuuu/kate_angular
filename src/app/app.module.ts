@@ -37,6 +37,8 @@ import { PaginaAppComponent } from './views/pagina-app/pagina-app.component';
 import { ApiService } from './shared/services/api.service';
 import { MenuAppComponent } from './views/menu-app/menu-app.component';
 import { MapsAppComponent } from './views/maps-app/maps-app.component';
+import { ListaSensoresComponent } from './views/pagina-app/lista-sensores/lista-sensores.component';
+import { EditarSensorComponent } from './views/pagina-app/lista-sensores/editar-sensor/editar-sensor.component';
 
 
 
@@ -56,7 +58,9 @@ import { MapsAppComponent } from './views/maps-app/maps-app.component';
     PaginaRegistroComponent,
     PaginaAppComponent,
     MenuAppComponent,
-    MapsAppComponent
+    MapsAppComponent,
+    ListaSensoresComponent,
+    EditarSensorComponent
   ],
 
   imports: [

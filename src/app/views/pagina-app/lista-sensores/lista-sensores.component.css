@@ -1,0 +1,440 @@
+html,body{
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#contenido {
+  width: 1000px auto;
+  margin-bottom: 5%;
+}
+
+.contenido-centrado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 5%;
+}
+
+.example-spacer {
+  flex: 1;
+}
+
+.example-margin {
+  margin: 0 10px;
+}
+
+.barra-sensor {
+  display: block;
+  flex: 1;
+  background-color: rgba(200, 200, 200, 0.35);
+  margin: 0 30% 0 30%;
+  height: 300px;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.18);
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.18);
+  font-size: 18px;
+}
+
+.header {
+  border-radius: 10px 10px 0 0;
+  background-color: rgb(255, 132, 0);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo {
+  font-size: 20px;
+  margin-left: 2%;
+  color: white;
+  font-weight: 600;
+}
+
+.btn-edit {
+  color: white;
+  background-color: transparent;
+  margin-right: 1%;
+}
+
+.contenido {
+  display: flex;
+  position: static;
+  flex: 1;
+  height: 250px;
+}
+
+.co2-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5%;
+}
+
+.nombre {
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.datos-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.datos {
+  display: block;
+  align-items: flex-start;
+  justify-content: left;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.datos > button {
+  cursor: pointer;
+  background-color: transparent;
+  color: #000000;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 25px;
+}
+
+/*CONTENIDO PARA LA BATERIA*/
+
+.bateria-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 7%;
+}
+
+.bateria {
+  display: block;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 10px;
+}
+
+.bateria-completa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bateria-img {
+  border: 3px solid black;
+  border-radius: 10px;
+  width: 80px;
+  height: 130px;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tot {
+  margin-top: 20%;
+  border-radius: 5px 5px 0 0;
+  border: 3px solid black;
+  height: 10px;
+  width: 30px;
+  top: 70;
+  background-color: #000000;
+}
+
+/*DIRECTIVAS NGCLASS PARA LA BATERIA*/
+
+/*BATERIA 100%*/
+.bat-baja100 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: rgb(13, 151, 0);
+}
+
+.bat-media100 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: rgb(13, 151, 0);
+}
+
+.bat-media100_2 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: rgb(13, 151, 0);
+}
+
+.bat-alta100 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: rgb(13, 151, 0);
+}
+
+.bat-alta100_2 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: rgb(13, 151, 0);
+}
+
+
+/*BATERIA 80%*/
+.bat-baja80 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: rgb(13, 151, 0);
+}
+
+.bat-media80 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: rgb(13, 151, 0);
+}
+
+.bat-media80_2 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: rgb(13, 151, 0);
+}
+
+.bat-alta80 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: transparent;
+}
+
+.bat-alta80_2 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: rgb(13, 151, 0);
+}
+
+/*BATERIA 60%*/
+.bat-baja60 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: rgb(255, 132, 0);
+}
+
+.bat-media60 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: rgb(255, 132, 0);
+}
+
+.bat-media60_2 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: rgb(255, 132, 0);
+}
+
+.bat-alta60_2 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: transparent;
+}
+
+.bat-alta60 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: transparent;
+}
+
+/*BATERIA 40%*/
+
+.bat-baja40 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: rgb(255, 132, 0);
+}
+
+.bat-media40 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: transparent;
+}
+
+.bat-media40_2 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: rgb(255, 132, 0);
+}
+
+.bat-alta40_2 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: transparent;
+}
+
+.bat-alta40 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: transparent;
+}
+
+/*BATERIA 20%*/
+.bat-baja20 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: rgb(214, 0, 0);
+}
+
+.bat-media20 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: transparent;
+}
+
+.bat-media20_2 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: transparent;
+}
+
+.bat-alta20 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: transparent;
+}
+
+.bat-alta20_2 {
+  border-radius: 4px;
+  width: 80px;
+  height: 23px;
+  background-color: transparent;
+}
+
+  /*BATERIA 0%*/
+  .bat-baja0 {
+    border-radius: 4px;
+    width: 80px;
+    height: 23px;
+    background-color: transparent;
+  }
+
+  .bat-media0 {
+    border-radius: 4px;
+    width: 80px;
+    height: 23px;
+    background-color: transparent;
+  }
+
+  .bat-media0_2 {
+    border-radius: 4px;
+    width: 80px;
+    height: 23px;
+    background-color: transparent;
+  }
+
+  .bat-alta0 {
+    border-radius: 4px;
+    width: 80px;
+    height: 23px;
+    background-color: transparent;
+  }
+
+  .bat-alta0_2 {
+    border-radius: 4px;
+    width: 80px;
+    height: 23px;
+    background-color: transparent;
+  }
+
+
+
+/* DIRECTIVAS NGCLASS PARA LOS CIRCULOS */
+
+/*CIRCULOS BAJOS*/
+
+.circulo-bajo {
+  position:relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border:5px solid rgb(13, 151, 0);
+  background: transparent;
+}
+
+.circulo-interior-bajo {
+  position:absolute;
+  width:140px;
+  height:140px;
+  border-radius: 50%;
+  background: rgb(13, 151, 0);
+  margin:auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+/*CIRCULOS MEDIOS*/
+
+.circulo-medio {
+  position:relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border:5px solid rgb(255, 132, 0);
+  background: transparent;
+}
+
+.circulo-interior-medio {
+  position:absolute;
+  width:160px;
+  height:160px;
+  border-radius: 50%;
+  background: rgb(255, 132, 0);
+  margin:auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+/*CIRCULOS ALTOS*/
+
+.circulo-alto {
+  position:relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border:5px solid rgb(214, 0, 0);
+  background: transparent;
+}
+
+.circulo-interior-alto {
+  position:absolute;
+  width:180px;
+  height:180px;
+  border-radius: 50%;
+  background: rgb(214, 0, 0);
+  margin:auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+
