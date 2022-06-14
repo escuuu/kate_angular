@@ -1,8 +1,31 @@
 import { Usuario } from './../classes/usuario';
 import { HttpClient } from '@angular/common/http';
-import { EventEmitter, Injectable, Output } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { Sensores } from '../interfaces/sensores';
+import { BehaviorSubject } from 'rxjs';
+
+
+const initSensor: Sensores = {
+  id_sensor: '',
+  nombre_sensor: '',
+  descripcion_sensor: '',
+  latitude: '',
+  longitude: '',
+  grupo_id: '',
+  descripcion_grupo: '',
+  id_usuario: '',
+  nombre_usuario: '',
+  admin: '',
+  sensor_tipo: '',
+  ts: '',
+  co2: '',
+  temperatura: '',
+  humedad: '',
+  presion: '',
+  bateria: '',
+  particulas: ''
+}
 
 @Injectable({
   providedIn: 'root'
@@ -10,10 +33,14 @@ import { Sensores } from '../interfaces/sensores';
 
 export class ApiService {
 
+  private sensor$ = new BehaviorSubject<Sensores>(initSensor);
+
   baseUrl = 'https://sani-ki.yatuaire.ovh:444';
 
   constructor(private http: HttpClient) { }
 
+
+  //FUNCIONES CON LLAMADAS A LA API
 
   public login(usuario: Usuario) : Observable<any> {
 
@@ -46,5 +73,16 @@ export class ApiService {
     const resultado = this.http.get<Sensores[]>('https://sani-ki.yatuaire.ovh:444/get_sensores_angular.php?user='+id_user);
 
     return resultado;
+  }
+
+
+  //FUNCIONES COMUNICACIÓN ENTRE COMPONENTES
+
+  get selectedSensor$(): Observable<Sensores> {
+    return this.sensor$.asObservable();
+  }
+
+  setSensor(sensor: Sensores): void {
+    this.sensor$.next(sensor);
   }
 }

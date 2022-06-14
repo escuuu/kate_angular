@@ -1,9 +1,8 @@
-import { NumberInput } from '@angular/cdk/coercion';
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 import * as Aos from 'aos';
 import { Sensores } from 'src/app/shared/interfaces/sensores';
+import { ApiService } from 'src/app/shared/services/api.service';
 import { EditarSensorComponent } from './editar-sensor/editar-sensor.component';
 
 @Component({
@@ -13,9 +12,9 @@ import { EditarSensorComponent } from './editar-sensor/editar-sensor.component';
 })
 export class ListaSensoresComponent implements OnInit {
 
-  public sensor_dialog! : Sensores;
-
   @Input() public sensor: Sensores;
+
+  seleccionado!: Sensores;
 
   co2 = 0;
   co2_porcentaje = 0;
@@ -27,9 +26,10 @@ export class ListaSensoresComponent implements OnInit {
   presion = 0;
 
   bat = 0;
-  static sensor_dialog: Sensores;
 
-  constructor(private dialog: MatDialog) {
+
+
+  constructor(private dialog: MatDialog, private apiService: ApiService) {
     this.sensor = {
       id_sensor: '',
       nombre_sensor: '',
@@ -59,6 +59,10 @@ export class ListaSensoresComponent implements OnInit {
     this.get_humedad();
     this.get_presion();
     this.get_bateria();
+
+    this.apiService.selectedSensor$.subscribe(
+      (sensorito: Sensores) => this.seleccionado = sensorito
+    )
   }
 
   get_co2():void {
@@ -84,12 +88,14 @@ export class ListaSensoresComponent implements OnInit {
   }
 
   openEditDialog(): void {
-
-    this.sensor_dialog = this.sensor;
-
+    this.set_sensor(this.sensor);
     this.dialog.open(EditarSensorComponent, {
-      height: '600px',
-      width: '500px'
+      height: '400px',
+      width: '600px'
     });
+  }
+
+  set_sensor(sensor_p: Sensores): void {
+    this.apiService.setSensor(sensor_p);
   }
 }
