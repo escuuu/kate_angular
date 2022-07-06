@@ -6,6 +6,7 @@ export interface Sensores {
   longitude: string;
   grupo_id: string;
   descripcion_grupo: string;
+  nombre_grupo: string;
   id_usuario: string;
   nombre_usuario: string;
   admin: string;

@@ -17,12 +17,12 @@ body { margin: 0;
 }
 
 mat-dialog-container {
-  background-color: #ffffffe8!important;
+  background-color: #ffffff!important;
   overflow: hidden !important;
 }
 
 .mat-form-field-appearance-outline .mat-form-field-outline {
-  color: #ffb700 !important;
+  color: rgb(255, 145, 0) !important;
 }
 
 .mat-form-field-label{

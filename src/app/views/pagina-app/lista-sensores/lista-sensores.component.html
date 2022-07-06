@@ -1,7 +1,6 @@
 <div id="contenido">
   <div class="contenido-centrado">
     <div class="barra-sensor font2">
-
       <div class="header">
         <div class="titulo font2">
           <span>{{sensor.nombre_sensor}}</span>
@@ -28,42 +27,43 @@
           </div>
 
         </div>
-        <span class="example-spacer"></span>
 
-        <div class="datos-container">
-          <div class="datos">
-            <button mat-button disabled><img src="assets/icons/thermometer.png">Temperatura: {{temp}} ºC</button><br><br>
-            <button mat-button disabled><img src="assets/icons/humidity.png">Humedad: {{humedad}} Hr</button>
+        <div class="datos-flexeados">
+          <div class="datos-container">
+            <div class="datos">
+              <button mat-button disabled><img src="assets/icons/thermometer.png">Temperatura: {{temp}} ºC</button><br><br>
+              <button mat-button disabled><img src="assets/icons/humidity.png">Humedad: {{humedad}} Hr</button>
+            </div>
           </div>
-        </div>
 
-        <span class="example-spacer"></span>
+          <span class="example-spacer-flexeados"></span>
 
-        <div class="bateria-container">
-          <div class="bateria">
-            <span class="titulo-bateria">BATERÍA</span>
-            <div class="bateria-completa">
-              <div class="tot"></div>
-              <div class="bateria-img">
-                  <div
-                    [ngClass]="{'bat-alta100': bat > 80, 'bat-alta80': bat <= 80, 'bat-alta60': bat <= 60, 'bat-alta40': bat <= 40, 'bat-alta20': bat <= 20, 'bat-alta0': bat <= 0 }">
-                  </div>
-                <span class="example-spacer"></span>
-                  <div
-                    [ngClass]="{'bat-alta100_2': bat > 80, 'bat-alta80_2': bat <= 80, 'bat-alta60_2': bat <= 60, 'bat-alta40_2': bat <= 40, 'bat-alta20_2': bat <= 20, 'bat-alta0_2': bat <= 0}">
-                  </div>
-                <span class="example-spacer"></span>
-                  <div
-                    [ngClass]="{'bat-media100': bat > 80, 'bat-media80': bat <= 80, 'bat-media60': bat <= 60, 'bat-media40': bat <= 40, 'bat-media20': bat <= 20, 'bat-media0': bat <= 0}">
-                  </div>
-                <span class="example-spacer"></span>
-                  <div
-                    [ngClass]="{'bat-media100_2': bat > 80, 'bat-media80_2': bat <= 80, 'bat-media60_2': bat <= 60, 'bat-media40_2': bat <= 40, 'bat-media20_2': bat <= 20, 'bat-media0_2': bat <=0}">
-                  </div>
-                <span class="example-spacer"></span>
-                  <div
-                    [ngClass]="{'bat-baja100': bat > 80, 'bat-baja80': bat <= 80, 'bat-baja60': bat <= 60, 'bat-baja40': bat <= 40, 'bat-baja20': bat <= 20, 'bat-baja0': bat <= 0}">
-                  </div>
+          <div class="bateria-container">
+            <div class="bateria">
+              <span class="titulo-bateria">BATERÍA</span>
+              <div class="bateria-completa">
+                <div class="tot"></div>
+                <div class="bateria-img">
+                    <div
+                      [ngClass]="{'bat-alta100': bat > 80, 'bat-alta80': bat <= 80, 'bat-alta60': bat <= 60, 'bat-alta40': bat <= 40, 'bat-alta20': bat <= 20, 'bat-alta0': bat <= 0 }">
+                    </div>
+                  <span class="example-spacer"></span>
+                    <div
+                      [ngClass]="{'bat-alta100_2': bat > 80, 'bat-alta80_2': bat <= 80, 'bat-alta60_2': bat <= 60, 'bat-alta40_2': bat <= 40, 'bat-alta20_2': bat <= 20, 'bat-alta0_2': bat <= 0}">
+                    </div>
+                  <span class="example-spacer"></span>
+                    <div
+                      [ngClass]="{'bat-media100': bat > 80, 'bat-media80': bat <= 80, 'bat-media60': bat <= 60, 'bat-media40': bat <= 40, 'bat-media20': bat <= 20, 'bat-media0': bat <= 0}">
+                    </div>
+                  <span class="example-spacer"></span>
+                    <div
+                      [ngClass]="{'bat-media100_2': bat > 80, 'bat-media80_2': bat <= 80, 'bat-media60_2': bat <= 60, 'bat-media40_2': bat <= 40, 'bat-media20_2': bat <= 20, 'bat-media0_2': bat <=0}">
+                    </div>
+                  <span class="example-spacer"></span>
+                    <div
+                      [ngClass]="{'bat-baja100': bat > 80, 'bat-baja80': bat <= 80, 'bat-baja60': bat <= 60, 'bat-baja40': bat <= 40, 'bat-baja20': bat <= 20, 'bat-baja0': bat <= 0}">
+                    </div>
+                </div>
               </div>
             </div>
           </div>

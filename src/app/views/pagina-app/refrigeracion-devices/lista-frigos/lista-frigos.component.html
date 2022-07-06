@@ -1,0 +1,89 @@
+<div id="contenido">
+    <div class="contenido-centrado">
+        <div class="barra-sensor font2">
+            <div class="header">
+                <div class="titulo font2">
+                    <span>{{name}}</span>
+                </div>
+                <span class="example-spacer"></span>
+                <button mat-icon-button class="btn-edit">
+                    <mat-icon>edit</mat-icon>
+                </button>
+            </div>
+            <br>
+
+            <div class="contenido">
+                <div class="datos-rows">
+                    <div class="co2-container">
+                        <span *ngIf="st == 0" matTooltip="ENCENDIDO" matTooltipPosition="right">
+                            <mat-icon style="color: green; width: 50; height: 50; font-size: 50px; margin-left: -20px;">
+                                power_settings_new</mat-icon>
+                            <br><br>
+                        </span>
+                        <span *ngIf="st == 1" matTooltip="APAGADO" matTooltipPosition="right">
+                            <mat-icon style="color: red; width: 50; height: 50; font-size: 50px; margin-left: -20px;">
+                                power_settings_new</mat-icon>
+                            <br><br>
+                        </span>
+                        <span class="datos3">{{ts_final}}</span>
+                    </div>
+                    <div class="datos-container">
+                        <br><br>
+                        <div class="datos-column">
+                            <div class="datos">
+                                <span><br><br></span>
+                                <span>
+                                    <button mat-button matTooltip="Temperatura 1" matTooltipPosition="right"><img
+                                            width="60" height="50" src="assets/icons/thermometer.png"><span style="font-size: 50px; font-weight:normal"> {{t1}} ºC </span></button><br><br>
+                                </span>
+                                <span>
+                                    <button mat-button matTooltip="Temperatura 2" matTooltipPosition="right"><img
+                                            width="60" height="50" src="assets/icons/thermometer.png"><span style="font-size: 50px; font-weight:normal"> {{t2}} ºC </span></button>
+                                </span>
+                            </div>
+                            <br><br>
+                            <div class="datos-rows">
+                                <span class="datos3" *ngIf="al != '0'">
+                                    <button mat-raised-button matTooltip="ALARMA ACTUAL" color="warn" matTooltipPosition="right"><mat-icon>
+                                        warning</mat-icon>  {{al}} </button><br><br>
+                                </span>
+                                <span class="datos3" *ngIf="al == '0'">
+                                    <button mat-raised-button matTooltip="ALARMA ACTUAL" matTooltipPosition="right"><mat-icon style="color:lightslategray;">
+                                        warning</mat-icon>  SIN ALARMAS </button><br><br>
+                                </span>
+                            </div>
+                            <div class="datos-rows">
+                                <span class="datos3">
+                                    <button mat-raised-button color="warn" matTooltip="NÚMERO DE ALARMAS" matTooltipPosition="right"><mat-icon matBadge="{{aa}}">warning</mat-icon></button><br><br>
+                                </span>
+                                <span class="datos3">
+                                    <button mat-raised-button matTooltip="Contador s1" matTooltipPosition="right"><img width="32"
+                                            height="32" src="assets/icons/iot.png"> {{s1}}  </button><br><br>
+                                </span>
+                                <span class="datos3">
+                                    <button mat-raised-button matTooltip="Contador s2" matTooltipPosition="right"><img width="32"
+                                            height="32" src="assets/icons/iot.png"> {{s2}}  </button><br><br>
+                                </span>
+                                <span class="datos3">
+                                    <button mat-raised-button matTooltip="Contador s3" matTooltipPosition="right"><img width="32"
+                                            height="32" src="assets/icons/iot.png"> {{s3}}  </button><br><br>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="datos-flexeados">
+                        <div></div>
+                        <div class="sensor_img">
+                            <br>
+                            <span>
+                                <img width="200" height="200" src="assets/frigo3.png">
+                            </span>
+                        </div>
+                        <div></div>
+                    </div> 
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

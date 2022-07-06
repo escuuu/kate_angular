@@ -1,0 +1,50 @@
+#contenido {
+  display: block;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.contenido-formulario {
+  display: flex;
+}
+
+.form1 {
+  display: block;
+}
+
+mat-form-field {
+  width: 250px;
+}
+
+.form2 {
+  display: block;
+}
+
+.localize {
+  display: flex;
+  text-align: center;
+}
+
+.btn-localize {
+  width: 250px;
+  color: black;
+}
+
+.edit {
+  margin-top: 8%;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+}
+
+.btn-borrar {
+  margin-left: 3%;
+  background: rgb(255,0,0);
+  background: linear-gradient(117deg, rgba(255,0,0,1) 0%, rgba(162,0,0,1) 100%);
+  color: white;
+  font-weight: 600;
+}
+
+

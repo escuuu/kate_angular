@@ -14,6 +14,7 @@ const initSensor: Sensores = {
   longitude: '',
   grupo_id: '',
   descripcion_grupo: '',
+  nombre_grupo: '',
   id_usuario: '',
   nombre_usuario: '',
   admin: '',
@@ -84,5 +85,18 @@ export class ApiService {
 
   setSensor(sensor: Sensores): void {
     this.sensor$.next(sensor);
+  }
+
+  //FUNCIÓN PARA OBTENER UBICACIÓN
+  getLocalization(): Promise<any> {
+    return new Promise((resolve, reject) => {
+      navigator.geolocation.getCurrentPosition(resp => {
+        resolve ({
+          lng: resp.coords.longitude,
+          lat: resp.coords.latitude
+        }
+        )
+      })
+    })
   }
 }

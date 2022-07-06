@@ -30,15 +30,15 @@ import { PaginaMapaComponent } from './views/pagina-mapa/pagina-mapa.component';
 import { PaginaLoginComponent } from './views/pagina-login/pagina-login.component';
 import { PaginaRegistroComponent } from './views/pagina-registro/pagina-registro.component';
 import { MatInputModule } from '@angular/material/input';
+import { MenuAppComponent } from './views/pagina-app/menu-app/menu-app.component';
+import { MapsAppComponent } from './views/pagina-app/maps-app/maps-app.component';
+import { ListaSensoresComponent } from './views/pagina-app/lista-sensores/lista-sensores.component';
+import { EditarSensorComponent } from './views/pagina-app/lista-sensores/editar-sensor/editar-sensor.component';
+import { PaginaAppComponent } from './views/pagina-app/pagina-app.component';
 
 
 //SERVICIOS
-import { PaginaAppComponent } from './views/pagina-app/pagina-app.component';
 import { ApiService } from './shared/services/api.service';
-import { MenuAppComponent } from './views/menu-app/menu-app.component';
-import { MapsAppComponent } from './views/maps-app/maps-app.component';
-import { ListaSensoresComponent } from './views/pagina-app/lista-sensores/lista-sensores.component';
-import { EditarSensorComponent } from './views/pagina-app/lista-sensores/editar-sensor/editar-sensor.component';
 
 
 
@@ -57,10 +57,10 @@ import { EditarSensorComponent } from './views/pagina-app/lista-sensores/editar-
     PaginaLoginComponent,
     PaginaRegistroComponent,
     PaginaAppComponent,
-    MenuAppComponent,
     MapsAppComponent,
     ListaSensoresComponent,
-    EditarSensorComponent
+    EditarSensorComponent,
+    MenuAppComponent
   ],
 
   imports: [

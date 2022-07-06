@@ -1,4 +1,64 @@
-<p>{{(selectedSensor$ | async)?.nombre_sensor}}<p>
-<p>{{(selectedSensor$ | async)?.temperatura}}<p>
-<p>{{(selectedSensor$ | async)?.latitude}}<p>
+  <div id="contenido">
+    <div class="contenido-formulario">
+      <div class="form1">
+        <form>
+          <mat-form-field appearance="outline" style="font-family: Josefin Sans;">
+            <mat-label>Nombre del sensor</mat-label>
+            <input matInput placeholder="Placeholder" [value]="(selectedSensor$ | async)?.nombre_sensor">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="font-family: Josefin Sans;">
+            <mat-label>Latitud</mat-label>
+            <input matInput placeholder="Placeholder" [value]="(selectedSensor$ | async)?.latitude">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="font-family: Josefin Sans;">
+            <mat-label>Longitud</mat-label>
+            <input matInput placeholder="Placeholder" [value]="(selectedSensor$ | async)?.longitude">
+          </mat-form-field>
+
+        </form>
+
+        <div class="localize">
+          <button class="btn-localize font2 btn-degradado" (click)="putLocalization()"  mat-flat-button>
+            LOCALIZAR<mat-icon>location_on</mat-icon>
+          </button>
+        </div>
+
+      </div>
+
+      <div class="form2">
+        <form>
+          <mat-form-field appearance="outline" style="font-family: Josefin Sans;">
+            <mat-label>Descripción</mat-label>
+            <input matInput placeholder="Placeholder" [value]="(selectedSensor$ | async)?.descripcion_sensor">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="font-family: Josefin Sans;">
+            <mat-label>Selecciona un grupo</mat-label>
+            <mat-select [(value)]="opcion" style="font-family: Josefin Sans;">
+              <mat-option  style="font-family: Josefin Sans;">Ninguno</mat-option>
+              <mat-option style="font-family: Josefin Sans;" [value]="grupo">{{grupo[0]}}</mat-option>
+              <mat-option style="font-family: Josefin Sans;" [value]="grupo">{{grupo[1]}}</mat-option>
+              <mat-option style="font-family: Josefin Sans;" [value]="grupo">{{grupo[2]}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="edit">
+      <button class="btn-actualizar font2 btn-degradado" mat-flat-button>
+        ACTUALIZAR
+      </button>
+      <button class="btn-borrar font2" mat-flat-button>
+        BORRAR SENSOR
+      </button>
+    </div>
+
+
+  </div>
+
+
 

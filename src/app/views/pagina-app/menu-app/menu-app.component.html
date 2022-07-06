@@ -22,7 +22,7 @@
 
       <span class="example-spacer"></span>
 
-      <button mat-flat-button id="login-button" fxHide.lt-md>
+      <button mat-flat-button id="login-button" fxHide.lt-md (click)="eliminarSesion()">
         <span class="login_class font2">
           CERRAR SESIÓN
         </span>
@@ -35,10 +35,10 @@
   </button>
 
   <mat-menu #beforeMenu="matMenu" xPosition="before">
-    <button mat-menu-item class="inicio_class">Inicio</button>
-    <button mat-menu-item class="inicio_class">Calidad del aire</button>
-    <button mat-menu-item class="inicio_class">Contáctanos</button>
-    <button mat-menu-item class="inicio_class icon font2">Iniciar sesión
+    <button mat-menu-item class="inicio_class" routerLink="/sensores-app">Sensores</button>
+    <button mat-menu-item class="inicio_class" routerLink="/maps">Maps</button>
+    <button mat-menu-item class="inicio_class">Big Data</button>
+    <button mat-menu-item class="inicio_class icon font2" (click)="eliminarSesion()">Cerrar sesión
       <mat-icon>person</mat-icon>
     </button>
   </mat-menu>

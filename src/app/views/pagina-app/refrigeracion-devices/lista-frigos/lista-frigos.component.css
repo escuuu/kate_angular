@@ -1,13 +1,27 @@
-html,body{
+html,
+body {
   height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
 }
 
+.buscador {
+  width: 150px;
+  height: 40px;
+}
+
+.sensor_img {
+  margin-left: 160px;
+}
+
+.icon-display {
+  transform: scale(2);
+}
+
 #contenido {
   width: 1000px auto;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
 }
 
 .contenido-centrado {
@@ -17,7 +31,7 @@ html,body{
   width: 100%;
   height: 100%;
   margin-top: 1%;
-  margin-bottom: 8%;
+  margin-bottom: 1%;
 }
 
 .example-spacer {
@@ -36,17 +50,17 @@ html,body{
   display: block;
   flex: 1;
   background-color: rgba(200, 200, 200, 0.35);
-  margin: 0 30% 0 30%;
-  height: 300px;
+  margin: 0 0% 0 0%;
+  height: 350px;
   border-radius: 10px;
-  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.18);
-  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.18);
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.18);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.18);
   font-size: 18px;
 }
 
 .header {
   border-radius: 10px 10px 0 0;
-  background-color: rgb(255, 145, 0);
+  background-color: rgb(255, 132, 0);
   height: 50px;
   display: flex;
   align-items: center;
@@ -79,6 +93,7 @@ html,body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   margin-right: 5%;
 }
 
@@ -86,8 +101,16 @@ html,body{
   position: absolute;
   z-index: 1;
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
+  color: white;
+  margin-top: -35px;
+}
+
+.nombre2 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 1100;
   color: white;
 }
 
@@ -96,22 +119,66 @@ html,body{
   display: flex;
 }
 
+.datos-columns {
+  display: flex;
+  flex-direction: column;
+}
+
+.datos-rows {
+  display: flex;
+  flex-direction: row;
+}
+
 .datos-container {
+  width: auto;
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.pantalla {
+  width: 500px;
+  height: 170px;
+  border: 1px solid orangered;
+}
+
 .datos {
   display: block;
   align-items: flex-start;
-  justify-content: left;
+  justify-content: center;
   font-size: 20px;
   line-height: 25px;
 }
 
-.datos > button {
+.datos2 {
+  display: block;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.datos3 {
+  display: block;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: center;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.datos>button {
+  cursor: pointer;
+  background-color: transparent;
+  color: #000000;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 25px;
+}
+
+.datos2>button {
   cursor: pointer;
   background-color: transparent;
   color: #000000;
@@ -346,41 +413,41 @@ html,body{
   background-color: transparent;
 }
 
-  /*BATERIA 0%*/
-  .bat-baja0 {
-    border-radius: 4px;
-    width: 60px;
-    height: 18px;
-    background-color: transparent;
-  }
+/*BATERIA 0%*/
+.bat-baja0 {
+  border-radius: 4px;
+  width: 60px;
+  height: 18px;
+  background-color: transparent;
+}
 
-  .bat-media0 {
-    border-radius: 4px;
-    width: 60px;
-    height: 18px;
-    background-color: transparent;
-  }
+.bat-media0 {
+  border-radius: 4px;
+  width: 60px;
+  height: 18px;
+  background-color: transparent;
+}
 
-  .bat-media0_2 {
-    border-radius: 4px;
-    width: 60px;
-    height: 18px;
-    background-color: transparent;
-  }
+.bat-media0_2 {
+  border-radius: 4px;
+  width: 60px;
+  height: 18px;
+  background-color: transparent;
+}
 
-  .bat-alta0 {
-    border-radius: 4px;
-    width: 60px;
-    height: 18px;
-    background-color: transparent;
-  }
+.bat-alta0 {
+  border-radius: 4px;
+  width: 60px;
+  height: 18px;
+  background-color: transparent;
+}
 
-  .bat-alta0_2 {
-    border-radius: 4px;
-    width: 60px;
-    height: 18px;
-    background-color: transparent;
-  }
+.bat-alta0_2 {
+  border-radius: 4px;
+  width: 60px;
+  height: 18px;
+  background-color: transparent;
+}
 
 
 
@@ -389,93 +456,178 @@ html,body{
 /*CIRCULOS BAJOS*/
 
 .circulo-bajo {
-  position:relative;
+  position: relative;
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border:5px solid rgb(13, 151, 0);
+  border: 5px solid rgb(13, 151, 0);
   background: transparent;
 }
 
 .circulo-interior-bajo {
-  position:absolute;
-  width:140px;
-  height:140px;
+  position: absolute;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   background: rgb(13, 151, 0);
-  margin:auto;
-  top: 0; left: 0; bottom: 0; right: 0;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 /*CIRCULOS MEDIOS*/
 
 .circulo-medio {
-  position:relative;
+  position: relative;
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border:5px solid rgb(255, 132, 0);
+  border: 5px solid rgb(255, 132, 0);
   background: transparent;
 }
 
 .circulo-interior-medio {
-  position:absolute;
-  width:160px;
-  height:160px;
+  position: absolute;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   background: rgb(255, 132, 0);
-  margin:auto;
-  top: 0; left: 0; bottom: 0; right: 0;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 /*CIRCULOS ALTOS*/
 
 .circulo-alto {
-  position:relative;
+  position: relative;
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border:5px solid rgb(214, 0, 0);
+  border: 5px solid rgb(214, 0, 0);
   background: transparent;
 }
 
 .circulo-interior-alto {
-  position:absolute;
-  width:180px;
-  height:180px;
+  position: absolute;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   background: rgb(214, 0, 0);
-  margin:auto;
-  top: 0; left: 0; bottom: 0; right: 0;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 @media screen and (max-width: 1400px) {
+
+  .sensor_img {
+    margin-left:150px;
+    margin-bottom: 40px;
+  }
   #contenido {
     width: 1000px auto;
-    margin-bottom: 8%;
+    margin-bottom: 4%;
   }
 
   .barra-sensor {
-    margin: 0 20% 0 20%;
+    margin: 0 10% 0 10%;
   }
 
   .co2-container {
+    width: 220px;
     margin-right: 8%;
   }
 }
 
 @media screen and (max-width: 1200px) {
+
+  .sensor_img {
+    margin-left:100px;
+    margin-bottom: 40px;
+  }
+
   .barra-sensor {
-    margin: 0 15% 0 15%;
+    margin: 0 5% 0 5%;
+  }
+
+  .datos-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .co2-container {
+    width: 200px;
+    margin-right: 8%;
   }
 
 }
 
 @media screen and (max-width: 1000px) {
+
+  .datos-container {
+    width: auto;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sensor_img {
+    margin-left: 25%;
+    margin-bottom: 20px;
+  }
+  .datos-rows {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .barra-sensor {
+    margin: 0 5% 0 5%;
+    height: 1020px;
+  }
+
+  .co2-container {
+    width: auto;
+    margin-right: 8%;
+  }
+
+  .datos {
+    display: block;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+    font-size: 20px;
+    line-height: 25px;
+
+  }
+
+  .datos2 {
+    display: block;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+    font-size: 20px;
+    line-height: 25px;
+
+  }
+
+  .datos3 {
+    font-size: 20px;
+    line-height: 25px;
+
+  }
+
   #contenido {
     width: 1000px auto;
     margin-top: 4%;
-    margin-bottom: 9%;
+    margin-bottom: 4%;
   }
 
 
@@ -486,11 +638,8 @@ html,body{
 
   .datos-flexeados {
     display: flex;
-    padding: 0 5% 0 7%;
-  }
-
-  .barra-sensor {
-    height: 600px;
+    padding: 0 5% 0 5%;
+    align-items: center;
   }
 
   .co2-container {
@@ -499,64 +648,73 @@ html,body{
   }
 
   .circulo-bajo {
-    position:relative;
+    position: relative;
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    border:5px solid rgb(13, 151, 0);
+    border: 5px solid rgb(13, 151, 0);
     background: transparent;
   }
 
   .circulo-interior-bajo {
-    position:absolute;
-    width:170px;
-    height:170px;
+    position: absolute;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
     background: rgb(13, 151, 0);
-    margin:auto;
-    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
   }
 
   /*CIRCULOS MEDIOS*/
 
   .circulo-medio {
-    position:relative;
+    position: relative;
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    border:5px solid rgb(255, 132, 0);
+    border: 5px solid rgb(255, 132, 0);
     background: transparent;
   }
 
   .circulo-interior-medio {
-    position:absolute;
-    width:200px;
-    height:200px;
+    position: absolute;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     background: rgb(255, 132, 0);
-    margin:auto;
-    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
   }
 
   /*CIRCULOS ALTOS*/
 
   .circulo-alto {
-    position:relative;
+    position: relative;
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    border:5px solid rgb(214, 0, 0);
+    border: 5px solid rgb(214, 0, 0);
     background: transparent;
   }
 
   .circulo-interior-alto {
-    position:absolute;
-    width:230px;
-    height:230px;
+    position: absolute;
+    width: 230px;
+    height: 230px;
     border-radius: 50%;
     background: rgb(214, 0, 0);
-    margin:auto;
-    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
   }
 
   .nombre {
@@ -565,4 +723,3 @@ html,body{
   }
 
 }
-

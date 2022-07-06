@@ -12,4 +12,8 @@ export class MenuAppComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  eliminarSesion(): void{
+    this.router.navigate(['inicio']);
+  }
 }

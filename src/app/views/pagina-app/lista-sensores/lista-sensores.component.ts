@@ -14,6 +14,8 @@ export class ListaSensoresComponent implements OnInit {
 
   @Input() public sensor: Sensores;
 
+
+
   seleccionado!: Sensores;
 
   co2 = 0;
@@ -38,6 +40,7 @@ export class ListaSensoresComponent implements OnInit {
       longitude: '',
       grupo_id: '',
       descripcion_grupo: '',
+      nombre_grupo: '',
       id_usuario: '',
       nombre_usuario: '',
       admin: '',

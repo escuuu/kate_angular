@@ -1,10 +1,17 @@
 <app-menu-app></app-menu-app>
 <div id="contenido">
   <div class="contenido-centrado">
-    <span class="bienvenida font2">Bienvenido {{usuario_logueado.nombre}}</span>
+    <span class="bienvenida font2">Bienvenido {{usuario_final.nombre}}</span>
+  </div>
+  <div class="add-sensor">
+    <button mat-flat-button class="btn-degradado font2">CREAR GRUPO</button>
+    <span class="example_spacer"></span>
+    <button mat-flat-button class="btn-degradado font2">+ AÑADIR SENSOR</button>
   </div>
   <div *ngIf="test == true">
-    <app-lista-sensores *ngFor="let sensor of listadoSensores" [sensor]="sensor"></app-lista-sensores>
+    <div>
+      <app-lista-sensores *ngFor="let sensor of listadoSensores" [sensor]="sensor"></app-lista-sensores>
+    </div>
   </div>
   <span *ngIf="test == false">Hola admin</span>
 </div>

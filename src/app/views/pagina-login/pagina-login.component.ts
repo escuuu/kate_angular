@@ -16,6 +16,7 @@ export class PaginaLoginComponent implements OnInit {
   public usuario : Usuario;
   hide = true;
   nombre = new FormControl('', [Validators.required, Validators.email]);
+  static usuario_logueado: Usuario;
 
   constructor(private apiService: ApiService, private router: Router, titulo: Title ) {
     titulo.setTitle('Sani-Ki | Iniciar Sesión');
@@ -33,15 +34,17 @@ export class PaginaLoginComponent implements OnInit {
     return this.nombre.hasError('email') ? 'Email no válido' : '';
   }
 
-  onSubmit(): void{
+  login(): void{
     this.apiService.login(this.usuario).subscribe(
       data => {
-        console.log(data);
-        if(data[0].length == 0){
+        if(data.length == 0) {
           alert('Usuario incorrecto');
         }
         else {
+          this.usuario.admin = data[0].admin;
+          this.usuario.id = data[0].id;
           this.router.navigate(['/sensores-app']);
+          PaginaLoginComponent.usuario_logueado = this.usuario;
         }
       },
       () => {

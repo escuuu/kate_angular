@@ -7,7 +7,7 @@ import { PaginaLoginComponent } from './views/pagina-login/pagina-login.componen
 import { PaginaMapaComponent } from './views/pagina-mapa/pagina-mapa.component';
 import { PaginaRegistroComponent } from './views/pagina-registro/pagina-registro.component';
 import { PortadaComponent } from './views/portada/portada.component';
-import { MapsAppComponent } from './views/maps-app/maps-app.component';
+import { MapsAppComponent } from './views/pagina-app/maps-app/maps-app.component';
 
 const routes: Routes = [
   { path: 'inicio', component: PortadaComponent },

@@ -9,6 +9,6 @@ export class Usuario {
     this.id = '';
     this.nombre = '';
     this.password = '';
-    this.admin = ''
+    this.admin = '';
   }
 }
